@@ -1,5 +1,5 @@
 # notes
 
-* [Gogs – Go Git Service](Gogs – Go Git Service.md)
+* [Gogs–Go_Git_Service](Gogs.md)
 * [React](React.md)
 * [VirtualBox](VirtualBox.md)
