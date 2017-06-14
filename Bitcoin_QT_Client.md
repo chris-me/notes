@@ -2,7 +2,7 @@
 
 https://en.bitcoin.it/wiki/How_to_import_private_keys_v7%2B
 
-#### unlock wallet.dat (times in seconds)
+#### unlock wallet.dat (time in seconds)
 
     walletpassphrase "YourLongPassphrase" 600
 
