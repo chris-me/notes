@@ -1,6 +1,6 @@
-## Dienstaccount
+## Serviceaccount
 
-only needed when code is not executed directly with "Firebase Functions" (but for example locally in a NodeJS environment
+only needed when code is not executed directly with "Firebase Functions" (but for example locally in a NodeJS environment)
 
 - Firebase Console --> wheel beside Overview --> Serviceaccounts --> Create
 - after creation the .json file containing the secrets can be downloaded here once
