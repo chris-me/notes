@@ -1,4 +1,6 @@
 - [Code Splitting](#code-splitting)
+- ["Dumb" Components](#dumb-components)
+- [Iterating Components](#iterating-components)
 
 ## Code Splitting
 
