@@ -1,3 +1,5 @@
+- [Code Splitting](#code-splitting)
+
 ## Code Splitting
 
 ### General / inside of a Component
@@ -24,4 +26,54 @@ const routes = (
       />
   </Route>
 )
+```
+
+## "Dumb" Components
+
+```javascript
+const Camp = ({camp}) => (
+  <div className="card">
+    <img className="card-img-top img-fluid" src="http://placehold.it/1200x150" alt="Card image cap" />
+    <div className="card-block">
+      <h4 className="card-title">{camp.name}</h4>
+      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+      <a href="#" className="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+)
+```
+
+## Iterating Components
+
+### directly inside of render function
+
+```javascript
+{this.props.camps.map( (camp, index) => {
+  return <Camp camp={camp} key={index}/>
+})}
+```
+
+### as class method
+
+```javascript
+  renderCamps() {
+    var camps = this.props.campStore.camps;
+    if (camps && camps.length > 0) {
+      return (
+        camps.map( (camp, index) => {
+          return <Camp camp={camp} key={index}/>
+        })
+      );
+    } else {
+      return (
+        <h4>Not Camps found</h4>
+      )
+    }
+  }
+```
+
+Then call it somewhere in a render function
+
+```javascript
+{this.renderCamps()}
 ```
