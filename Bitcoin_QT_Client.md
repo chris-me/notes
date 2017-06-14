@@ -1,24 +1,24 @@
-## Konsolenbefehle
+## Console commands
 
 https://en.bitcoin.it/wiki/How_to_import_private_keys_v7%2B
 
-#### wallet.dat entsperren (Zeit in Sekunden)
+#### unlock wallet.dat (times in seconds)
 
     walletpassphrase "YourLongPassphrase" 600
 
-#### Adresse mithilfe von privatem Schlüssel importieren
+#### import address via private key
 
     importprivkey yourPrivateKeyInWalletImportFormat "TheLabelThatIWant"
 
-#### Privaten Key von Adresse ausgeben:\'''
+#### print private key of an address
 
     dumpprivkey publickeyhere
 
-#### Im wallet vorhandene Keys auflisten (listet public keys)
+#### print existing keys (public ones)
 
     listreceivedbyaddress 0 true
     listaddressgroupings
 
-#### Informationen über den laufenden Client ausgeben
+#### print info about the running client
 
     getinfo
