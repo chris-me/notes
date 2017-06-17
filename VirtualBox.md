@@ -18,5 +18,10 @@ VBoxManage clonehd --format vdi /path/to/original.vmdk /path/to/converted.vdi
 zerofree /dev/sda1
 ```
 
-- run "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifymedium disk somehdd.vdi --compact
+On the host:
+
+```bash
+VBoxManage modifymedium disk somehdd.vdi --compact
+```
+
 - more at: https://ubuntuforums.org/archive/index.php/t-908128.html
