@@ -1,3 +1,11 @@
+## Clone / Convert Virtual Disk
+
+```bash
+VBoxManage clonehd --format vdi /path/to/original.vmdk /path/to/converted.vdi
+```
+
+- more at: http://www.rootz.de/2010/09/virtualbox-vmdk-images-zu-vdi-images-convertieren-einfach-schnell/
+
 ## Shrink Virtual Disk
 
 ### Ubuntu / Linux VM
