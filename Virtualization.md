@@ -1,4 +1,4 @@
-- VirtualBox
+- [VirtualBox](#virtualBox)
   - [Convert Virtual Disk](#clone--convert-virtual-disk)
   - [Shrink Virtual Disk](#shrink-virtual-disk)
 
