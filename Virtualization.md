@@ -1,3 +1,7 @@
+- VirtualBox
+  - [Convert Virtual Disk](#clone--convert-virtual-disk)
+  - [Shrink Virtual Disk](#shrink-virtual-disk)
+
 # VirtualBox
 
 ## Clone / Convert Virtual Disk
