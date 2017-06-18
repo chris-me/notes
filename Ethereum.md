@@ -10,5 +10,5 @@ Mining on Windows
 ```
 ethminer.exe --farm-recheck 200 -G --opencl-platform 0 -S eth-eu1.nanopool.org:9999 -O 0xYOURADDRESS/YOUR@EMAIL.com
 ```
-
+- Check your address: https://eth.nanopool.org/
 - more at: https://www.heise.de/newsticker/meldung/Ethereum-statt-Nebenjob-Anleitung-zum-Geldverdienen-mit-Gaming-PCs-3743725.html
