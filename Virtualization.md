@@ -1,6 +1,32 @@
+- [Cloning VM's](#cloning-vms)
+  - [GNU/Linux](#clone--convert-virtual-disk)
 - [VirtualBox](#virtualbox)
   - [Convert Virtual Disk](#clone--convert-virtual-disk)
   - [Shrink Virtual Disk](#shrink-virtual-disk)
+
+<br>
+
+# Cloning VM's
+
+## GNU/Linux
+
+- Clone / Copy the VM (make sure new MAC's are generated)
+- Change the hostname (boot without network):
+  - Ubuntu: adjust /etc/hosts and /etc/hostname --> reboot
+  - RHEL / CentOS: use the nmtui command line tool
+- Delete all SSH Keys (users and at global):
+
+```
+sudo rm -v /etc/ssh/ssh_host_*
+```
+
+- Recreate global SSH Keys:
+  - Generally they should be recreated next boot when deleted
+  - For Ubuntu one can run:
+
+```
+sudo dpkg-reconfigure openssh-server
+```
 
 # VirtualBox
 
