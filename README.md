@@ -3,6 +3,7 @@
 - Coins
   - [Bitcoin_QT_Client](Bitcoin_QT_Client.md)
   - [Ethereum](Ethereum.md)
+  - [Wallet_Applications](Wallet_Applications.md)
 - [Gogs–Go_Git_Service](Gogs.md)
 - [Google_Cloud_Storage](Google_Cloud_Storage.md)
 - [JavaScript_Cheatsheet](JavaScript_Cheatsheet.md)
