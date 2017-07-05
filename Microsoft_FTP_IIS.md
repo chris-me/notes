@@ -29,3 +29,7 @@ How to install Microsoft FTP Server (IIS) with multiple user accounts, each havi
 * Click "Add Allow Rule"
 * At specific users, insert the corresponding username and set permissions as wanted
 * Make sure the user also has the right NTFS permissions in the file system for this directories
+
+## Sources
+
+http://www.sherweb.com/blog/how-to-set-up-ftp-access-for-multiple-users-with-user-isolation/
