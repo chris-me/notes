@@ -3,7 +3,7 @@ How to install Microsoft FTP Server (IIS) with multiple user accounts, each havi
 ### Prerequisites / Install components
 
 * Create some local user accounts that will later be used to access the server w/ FTP
-* With the Server Manager Tool install the Role "Webserver (IIS) including Managment Tools
+* With the Server Manager Tool install the Role "Webserver (IIS)", including Managment Tools
 * One the details page, select FTP Server, FTP Service and FTP Extensibility
 
 ### Setup the basic FTP Site
@@ -11,7 +11,7 @@ How to install Microsoft FTP Server (IIS) with multiple user accounts, each havi
 * Open IIS Management Console
 * Create a new FTP Site named "MainFTP" pointing to "C:\inetpub\ftproot"
 * Next, leave IP unassigned and disable SSL (this being a simple manual for using FTP internally)
-* Next, select Basic Authentication and Allow access to Specified users
+* Select Basic Authentication and Allow access to Specified users
 * For the username you can take your local user w/ read/write permissions for example to be able to proceed
 * Finish the wizard
 
