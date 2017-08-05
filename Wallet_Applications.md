@@ -23,3 +23,12 @@ C:\Users\USERNAME\AppData\Roaming\Electrum-DASH\wallets
 ### MyEtherWallet
 
 - https://www.myetherwallet.com/ (JavaScript Browser Application)
+
+## LBRY
+
+https://lbry.io/
+- Wallet Location:
+
+```
+C:\Users\USERNAME\AppData\Roaming\lbryum\wallets
+```
