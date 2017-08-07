@@ -18,7 +18,7 @@ How to install Microsoft FTP Server (IIS) with multiple user accounts, each havi
 ### Adjust IIS FTP Settings
 
 * Under the newly created "MainFTP" Site select user isolation
-* Choose "User name directory"
+* Choose "Isolate Users" - "User name directory"
 * Under "MainFTP", create a new virtual directory named "LocalUser" pointing to "C:\inetpub\ftproot" (must be named "LocalUser" to work correctly)
 
 ### Per-User Steps
