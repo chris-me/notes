@@ -34,3 +34,15 @@ sudo ufw allow 10080/tcp
 ```bash
 docker run --restart=unless-stopped --name=gogs -p 10022:22 -p 10080:3000 -v /mnt/docker-gogs:/data gogs/gogs
 ```
+
+### Upgrade
+
+```bash
+docker ps -a
+docker rm -f gogs
+docker pull gogs/gogs
+docker run --restart=unless-stopped --name=gogs -p 10022:22 -p 10080:3000 -v /mnt/docker-gogs-data:/data gogs/gogs
+# Exit with CTRL-C, then
+docker start gogs
+docker logs gogs
+```
