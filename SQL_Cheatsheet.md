@@ -1,16 +1,41 @@
 > Tested on 'MySQL' and 'SQLite'
 
 - [Table Structure](#table-structure)
-  - [Create new Table](#create-new-table)
+  - [Create Table](#create-table)
+  - [Create Table  with Constraints](#create-table-with-constraints)
+  - [Add new Column to existing Table](#add-new-column-to-existing-table)
 - [CRUD](#crud)
+  - [Insert](#insert)
+  - [Select](#select)
+  - [Update](#update)
+  - [Delete](#delete)
 
 # Table Structure
 
-## Create new Table
+## Create Table
 
 ```sql
 CREATE TABLE celebs (id INTEGER, name TEXT, age INTEGER);
 ```
+
+## Create Table with Constraints
+
+```sql
+CREATE TABLE celebs (
+    id INTEGER PRIMARY KEY,
+    name TEXT UNIQUE,
+    date_of_birth TEXT NOT NULL,
+    date_of_death TEXT DEFAULT 'Not Applicable',
+);
+```
+
+| Name              | Characteristics                  |
+| :---------------- | :------------------------------- |
+| PRIMARY KEY       | Only one per table, Unique       |
+| UNIQUE            | Unique value                     |
+| NOT NULL          | Must have a value                |
+| DEFAULT           | Set if no Value given            |
+
 
 ## Add new Column to existing Table
 
