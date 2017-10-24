@@ -7,3 +7,11 @@ https://hc.apache.org/
 ### SQLITE JDBC Drivers
 
 https://bitbucket.org/xerial/sqlite-jdbc/downloads/
+
+## Snippets
+
+### Get User Home Directory
+
+```java
+String userHome = System.getProperty("user.home");
+```
