@@ -15,3 +15,9 @@ https://bitbucket.org/xerial/sqlite-jdbc/downloads/
 ```java
 String userHome = System.getProperty("user.home");
 ```
+
+## Links
+
+* Swing / Threading
+
+  * https://www.javamex.com/tutorials/threads/invokelater.shtml
