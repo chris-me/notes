@@ -9,7 +9,6 @@ public class Main extends Application {
 			VBox root = new VBox();
 			Label lbl = new Label("Hello World");
 			root.getChildren().add(lbl);
-
 			Scene scene = new Scene(root,400,400);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Hello World");
