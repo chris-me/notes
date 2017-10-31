@@ -7,6 +7,7 @@ https://hc.apache.org/
 ### CloudBoost
 
 https://cloudboost.io
+
 http://mvnrepository.com/artifact/io.cloudboost/JavaSDK/1.0.7
 
 Maven POM:
