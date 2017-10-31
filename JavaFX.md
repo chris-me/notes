@@ -20,6 +20,7 @@ public class Main extends Application {
 
 	@Override
 	public void init() throws Exception {
+		// No GUI related operations allowed here
 		System.out.println("init()");
 	}
 
