@@ -1,5 +1,8 @@
 
 - [Packages](#packages)
+  - [Apache HttpComponents](#apache-httpcomponents)
+  - [CloudBoost](#cloudBoost)
+  - [SQLITE JDBC Drivers](#sqlite-jdbc-drivers)
 - [Snippets](#snippets)
 - [Links](#links)
 
