@@ -35,3 +35,7 @@ public class Main extends Application {
 }
 
 ```
+
+## Switching Scenes
+
+http://www.javafxtutorials.com/tutorials/switching-to-different-screens-in-javafx-and-fxml/
