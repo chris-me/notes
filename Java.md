@@ -1,10 +1,15 @@
-## Packages
 
-### Apache HttpComponents
+- [Packages](#packages)
+- [Snippets](#snippets)
+- [Links](#links)
+
+# Packages
+
+## Apache HttpComponents
 
 https://hc.apache.org/
 
-### CloudBoost
+## CloudBoost
 
 https://cloudboost.io
 
@@ -21,19 +26,19 @@ Maven POM:
 </dependency>
 ```
 
-### SQLITE JDBC Drivers
+## SQLITE JDBC Drivers
 
 https://bitbucket.org/xerial/sqlite-jdbc/downloads/
 
-## Snippets
+# Snippets
 
-### Get User Home Directory
+## Get User Home Directory
 
 ```java
 String userHome = System.getProperty("user.home");
 ```
 
-## Links
+# Links
 
 * Swing / Threading
 
