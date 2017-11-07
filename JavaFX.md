@@ -1,4 +1,4 @@
-## Lifecycle Methods
+## Application Lifecycle Methods
 
 ```java
 public class Main extends Application {
