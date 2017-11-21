@@ -16,10 +16,20 @@ $ git commit -m 'message'
 
 ## Blow away a complete commit
 
-Best done before having pushed a commit to remote!
-
 see also https://stackoverflow.com/questions/927358/how-to-undo-the-last-commits-in-git
 
+Reset the current branch to a specific commit
+
 ```bash
-# git reset --hard HEAD~1
+git reset --hard HEAD~1
+# or
+git reset --hard master~1
 ```
+
+Force overwrite the remote branch:
+
+```bash
+git push -f
+```
+
+
