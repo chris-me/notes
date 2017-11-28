@@ -4,10 +4,11 @@
 
 http://tomcat.apache.org/tomcat-8.5-doc/appdev/deployment.html
 
-| Directory          | Description                                                                  |
-|--------------------|------------------------------------------------------------------------------|
-| / (root)           | Everything public visible (*.html, *.jsp, ...)                               |
-| /WEB-INF/          | Everything in this folder (and subfolders) is not public visible             |
-| /WEB-INF/web.xml   |  XML file describing servlets and other components                           |
-| /WEB-INF/classes/  | Java class files (and associated resources) required for the application     |
-| /WEB-INF/lib/      |  JAR files                                                                   |
+| Directory                        | Description                                                                  |
+|----------------------------------|------------------------------------------------------------------------------|
+| /webapp/ (root)                  | Everything public visible (*.html, *.jsp, ...)                               |
+| /webapp/WEB-INF/                 | Everything in this folder (and subfolders) is not public visible             |
+| /webapp/WEB-INF/web.xml          |  XML file describing servlets and other components                           |
+| /webapp/WEB-INF/classes/         | Java class files (and associated resources) required for the application     |
+| /webapp/WEB-INF/lib/             |  JAR files                                                                   |
+| /lib/                            |  JAR files here are visible to all web applications and internal Tomcat      |
