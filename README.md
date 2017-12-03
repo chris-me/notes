@@ -9,6 +9,7 @@
 - [Elasticsearch_Logstash_Kibana_Filebeat](Elasticsearch_Logstash_Kibana_Filebeat.md)
 - [FeathersJS](FeathersJS.md)
 - [git](git.md)
+- [GitLab](GitLab.md)
 - [Gogs–Go_Git_Service](Gogs.md)
 - [Google_Cloud_Storage](Google_Cloud_Storage.md)
 - [Java](Java.md)
