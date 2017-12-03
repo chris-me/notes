@@ -1,4 +1,5 @@
 - [Service Query Examples](#service-query-examples)
+- [Validation](#validation)
 
 # Service Query Examples
 
@@ -40,3 +41,10 @@ const result = await balancesService.find({
   }
 });
 ```
+
+# Validation
+
+## AJV
+
+- http://epoberezkin.github.io/ajv/
+- https://code.tutsplus.com/tutorials/validating-data-with-json-schema-part-1--cms-25343
