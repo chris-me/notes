@@ -32,7 +32,10 @@ sudo ufw allow 10080/tcp
 ## Docker
 
 ```bash
-docker run --restart=unless-stopped --name=gogs -p 10022:22 -p 10080:3000 -v /mnt/docker-gogs:/data gogs/gogs
+docker run --restart=unless-stopped \
+    --name=gogs --public 10022:22 --public 10080:3000 \
+    --volume /mnt/docker-gogs:/data \
+    gogs/gogs
 ```
 
 ### Upgrade
