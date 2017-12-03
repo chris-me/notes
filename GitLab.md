@@ -2,6 +2,8 @@
 
 # Running GitLab with Docker
 
+https://docs.gitlab.com/omnibus/docker/README.html
+
 ## Apache vHost
 
 
@@ -14,8 +16,7 @@ Apache Configuration example:
 ```
 <VirtualHost *:80>
     ServerName git.mydomain.com
-    #ServerAlias www.domain.tld
- 
+    #ServerAlias www.domain.tld 
     ProxyPass / http://localhost:10080/
     ProxyPassReverse / http://localhost:10080/
     RewriteEngine on
@@ -36,7 +37,7 @@ sudo ufw allow 10080/tcp
 ```bash
 docker run --detach \
     --hostname git.teamheartcode.com \
-    # set env when SSH port is non default (22)
+    # set env when SSH port is non default (22):
     --env GITLAB_OMNIBUS_CONFIG="gitlab_rails['gitlab_shell_ssh_port'] = 10022" \
     --publish 127.0.0.1:10080:80 --publish 10022:22 \
     --name gitlab \
