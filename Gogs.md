@@ -41,6 +41,8 @@ docker run --restart=unless-stopped --name=gogs -p 10022:22 -p 10080:3000 -v /mn
 docker ps -a
 docker rm -f gogs
 docker pull gogs/gogs
-docker run -d --restart=unless-stopped --name=gogs -p 10022:22 -p 10080:3000 -v /mnt/docker-gogs-data:/data gogs/gogs
+docker run -d --restart=unless-stopped \
+    --name=gogs -p 10022:22 -p 127.0.0.1:10080:3000 \
+    -v /mnt/docker-gogs-data:/data gogs/gogs
 docker logs -f gogs
 ```
