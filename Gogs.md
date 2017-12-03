@@ -1,4 +1,6 @@
-> Ubuntu specific for the moment
+> Testet on Ubuntu 16.04
+
+# Running Gogs with Docker
 
 ## Apache vHost
 
@@ -36,16 +38,15 @@ docker run --restart=unless-stopped \
     --name=gogs --public 10022:22 --public 10080:3000 \
     --volume /mnt/docker-gogs:/data \
     gogs/gogs
+docker logs -f gogs
 ```
 
-### Upgrade
+## Upgrade
 
 ```bash
 docker ps -a
 docker rm -f gogs
 docker pull gogs/gogs
-docker run -d --restart=unless-stopped \
-    --name=gogs -p 10022:22 -p 127.0.0.1:10080:3000 \
-    -v /mnt/docker-gogs-data:/data gogs/gogs
-docker logs -f gogs
 ```
+
+Now run as usual
