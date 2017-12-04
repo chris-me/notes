@@ -37,7 +37,7 @@ sudo ufw allow 10080/tcp
 docker run --detach \
     --restart=unless-stopped \
     --name=gogs \
-    --publish 10022:22 --publish 10080:3000 \
+    --publish 10022:22 --publish 127.0.0.1:10080:3000 \
     --volume /mnt/docker-gogs-data:/data \
     gogs/gogs
 docker logs -f gogs
