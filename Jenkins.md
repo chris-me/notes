@@ -15,6 +15,8 @@ docker run --detach \
 
 ## Example Workflow
 
+https://jenkins.io/doc/tutorials/building-a-node-js-and-react-app-with-npm/
+
 - Requirements: running Jenkins instance with default plugins installed
 - Create new Job
 - Name as wanted
