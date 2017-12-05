@@ -51,4 +51,4 @@ docker rm -f gogs
 docker pull gogs/gogs
 ```
 
-Now run as usual
+run as usual
