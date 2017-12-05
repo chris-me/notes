@@ -2,7 +2,11 @@
 
 # Running GitLab with Docker
 
+## Related Links
+
 https://docs.gitlab.com/omnibus/docker/README.html
+
+https://docs.gitlab.com/omnibus/settings/nginx.html#supporting-proxied-ssl
 
 ## Apache vHost
 
@@ -36,8 +40,7 @@ sudo ufw allow 10080/tcp
 
 ```bash
 docker run --detach \
-    --hostname git.teamheartcode.com \
-    --env GITLAB_OMNIBUS_CONFIG="gitlab_rails['gitlab_shell_ssh_port'] = 10022" \
+    --hostname git.mydomain.com \
     --publish 127.0.0.1:10080:80 --publish 10022:22 \
     --name gitlab \
     --restart=unless-stopped \
@@ -45,6 +48,21 @@ docker run --detach \
     --volume gitlab-logs:/var/log/gitlab \
     --volume gitlab-data:/var/opt/gitlab \
     gitlab/gitlab-ce:latest
+```
+
+### Adjustments in /etc/gitlab/gitlab.rb:
+
+```ruby
+external_url 'https://git.mydomain.com'
+gitlab_rails['gravatar_ssl_url'] = 'https://secure.gravatar.com/avatar/%{hash}?s=%{size}&d=identicon'
+nginx['listen_port'] = 80
+nginx['listen_https'] = false
+nginx['proxy_set_headers'] = {
+  "X-Forwarded-Proto" => "https",
+  "X-Forwarded-Ssl" => "on"
+}
+# only if ssl is on the host is not on port 22:
+#gitlab_rails['gitlab_shell_ssh_port'] = 10022
 ```
 
 ### Upgrade
