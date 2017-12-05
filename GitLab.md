@@ -40,7 +40,7 @@ docker run --detach \
     --env GITLAB_OMNIBUS_CONFIG="gitlab_rails['gitlab_shell_ssh_port'] = 10022" \
     --publish 127.0.0.1:10080:80 --publish 10022:22 \
     --name gitlab \
-    --restart always \
+    --restart=unless-stopped \
     --volume gitlab-config:/etc/gitlab \
     --volume gitlab-logs:/var/log/gitlab \
     --volume gitlab-data:/var/opt/gitlab \
