@@ -70,7 +70,7 @@ nginx['proxy_set_headers'] = {
 ```bash
 docker stop gitlab
 docker rm gitlab
-docker gitlab/gitlab-ce:latest
+docker pull gitlab/gitlab-ce:latest
 ```
 
 run as usual
