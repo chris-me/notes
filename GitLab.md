@@ -50,11 +50,9 @@ docker run --detach \
 ### Upgrade
 
 ```bash
-docker ps -a
-docker rm -f gogs
-docker pull gogs/gogs
-docker run -d --restart=unless-stopped \
-    --name=gogs -p 10022:22 -p 127.0.0.1:10080:3000 \
-    -v /mnt/docker-gogs-data:/data gogs/gogs
-docker logs -f gogs
+docker stop gitlab
+docker rm gitlab
+docker gitlab/gitlab-ce:latest
 ```
+
+run as usual
