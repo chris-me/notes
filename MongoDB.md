@@ -3,5 +3,13 @@
 ## Docker
 
 ```bash
-docker run --name mongo01 -p 27017:27017 -v /opt/mongodb_data:/data/db -d mongo
+#!/bin/bash
+
+docker run --detach \
+  --restart=unless-stopped \
+  --publish 127.0.0.1:27017:27017 \
+  --volume mongodb-data:/data/db \
+  --volume mongodb-config:/data/configdb \
+  --name mongodb \
+  mongo:3.4
 ```
