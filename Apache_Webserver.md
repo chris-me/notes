@@ -5,6 +5,13 @@
 [stackoverflow](https://stackoverflow.com/questions/27526281/websockets-and-apache-proxy-how-to-configure-mod-proxy-wstunnel/27534443#27534443
 )
 
+Assuming some socket.io backend is running on port 3030.
+
+```bash
+a2enmod proxy
+a2enmod proxy_wstunnel
+```
+
 
 ```apache
 <VirtualHost *:80>
