@@ -20,6 +20,7 @@
 - [MongoDB](MongoDB.md)
 - [Ruby_on_Rails](Ruby_on_Rails.md)
 - [React](React.md)
+- [Redis](Redis.md)
 - [SQL_Cheatsheet](SQL_Cheatsheet.md)
 - [Unity3D](Unity3D.md)
 - [Virtualization](Virtualization.md)
