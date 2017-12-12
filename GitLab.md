@@ -1,5 +1,5 @@
 - [GitLab CI](#gitLab-ci)
-- [GitLab Docker Integration](#gitLab-docker-integration)
+- [GitLab Docker Integration](#gitlab-docker-integration)
 
 # GitLab CI
 
@@ -16,6 +16,7 @@ https://docs.gitlab.com/ce/api/environments.html#delete-an-environment
 curl --request DELETE --header "PRIVATE-TOKEN: mytoken" "https://gitlab.example.com/api/v4/projects/1/environments/1"
 ```
 
+- Deleting can take up to several minutes
 
 # GitLab Docker Integration
 
