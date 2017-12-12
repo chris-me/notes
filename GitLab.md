@@ -1,6 +1,23 @@
-> Testet on Ubuntu 16.04
+- [GitLab CI](#gitLab-ci)
+- [GitLab Docker Integration](#gitLab-docker-integration)
 
-# Running GitLab with Docker
+# GitLab CI
+
+## Delete an environment
+
+https://docs.gitlab.com/ce/api/environments.html#delete-an-environment
+
+- Create an personal access token (User Settings / Access Tokens) with 'api' scope
+- Get the roject ID (project settings --> general project settings)
+- Get the environment ID (project --> CI --> Hover over the environment)
+- Execute CURL request:
+
+```bash
+curl --request DELETE --header "PRIVATE-TOKEN: mytoken" "https://gitlab.example.com/api/v4/projects/1/environments/1"
+```
+
+
+# GitLab Docker Integration
 
 ## Related Links
 
