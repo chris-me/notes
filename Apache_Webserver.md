@@ -1,4 +1,30 @@
+- [Single Page Application Virtual Hosts](#single-page-application-virtual-hosts)
 - [Websockets (Socket.io) Virtual Hosts](#websockets-socket-io-virtual-hosts)
+
+## Single Page Application Virtual Hosts
+
+https://stackoverflow.com/questions/31744657/vhosts-conf-for-single-page-app
+
+```apache
+<VirtualHost *:80>
+  ServerName my.app.com
+  DirectoryIndex index.html
+  DocumentRoot /export/www/app
+  <Directory "/export/www/app">
+    order allow,deny
+    allow from all
+
+    RewriteEngine on
+
+    RewriteCond %{REQUEST_FILENAME} -s [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^.*$ - [NC,L]
+    RewriteRule ^(.*) /index.html [NC,L]
+  </Directory>
+</VirtualHost>
+```
+
 
 ## Websockets (Socket.io) Virtual Hosts
 
