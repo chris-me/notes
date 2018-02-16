@@ -18,7 +18,27 @@ curl --request DELETE --header "PRIVATE-TOKEN: mytoken" "https://gitlab.example.
 
 - Deleting can take up to several minutes
 
-# GitLab Docker Integration
+## SSH Authentication
+
+https://docs.gitlab.com/ee/ci/ssh_keys/README.html
+
+- On the server that gitlab must login to, run:
+
+```bash
+ssh-keygen
+```
+
+- Add the own public key to the authorized_keys file and adjust permissions
+
+```bash
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 700 ~/.ssh/*
+```
+
+- Add the private key as a secret variable to your project and proceed w/ link above
+
+# GitLab Docker
 
 ## Related Links
 
