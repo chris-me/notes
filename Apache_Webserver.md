@@ -22,10 +22,10 @@ sudo vi /etc/httpd/sites-available/00-default
 # Content:
 <VirtualHost *:80>
     ServerName www.example2.com
-    DocumentRoot /var/www/example2.com/public_html
     ServerAlias example2.com
-    ErrorLog /var/www/example2.com/error.log
-    CustomLog /var/www/example2.com/requests.log combined
+    DocumentRoot /var/www/html
+    ErrorLog /var/log/httpd/error.log
+    CustomLog /var/log/httpd/access.log combined
 </VirtualHost>
 sudo ln -s /etc/httpd/sites-available/00-default.conf /etc/httpd/sites-enabled/
 # Create an application specific virtual hosts config file:
