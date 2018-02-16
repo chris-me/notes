@@ -1,6 +1,39 @@
 - [Single Page Application Virtual Hosts](#single-page-application-virtual-hosts)
 - [Websockets (Socket.io) Virtual Hosts](#websockets-socket-io-virtual-hosts)
 
+## Centos 7 Installation with Virtual Host
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-7
+
+
+```bash
+sudo yum -y install httpd
+sudo systemctl enable httpd.service
+sudo mkdir /var/www/mysite
+sudo chown -R mysiteuser:mysiteuser /var/www/mysite
+sudo vi /var/www/mysite/index.html # for testing
+sudo mkdir /etc/httpd/sites-available
+sudo mkdir /etc/httpd/sites-enabled
+sudo vi /etc/httpd/conf/httpd.conf
+# Add this line at the end:
+IncludeOptional sites-enabled/*.conf
+# Create a default virtual hosts file:
+sudo vi /etc/httpd/sites-available/00-default
+# Content:
+<VirtualHost *:80>
+    ServerName www.example2.com
+    DocumentRoot /var/www/example2.com/public_html
+    ServerAlias example2.com
+    ErrorLog /var/www/example2.com/error.log
+    CustomLog /var/www/example2.com/requests.log combined
+</VirtualHost>
+sudo ln -s /etc/httpd/sites-available/00-default.conf /etc/httpd/sites-enabled/
+# Create an application specific virtual hosts config file:
+sudo vi /etc/httpd/sites-available/z_mysite.conf
+sudo ln -s /etc/httpd/sites-available/z_mysite.conf /etc/httpd/sites-enabled/
+sudo systemctl restart httpd.service
+```
+
 ## Single Page Application Virtual Hosts
 
 https://stackoverflow.com/questions/31744657/vhosts-conf-for-single-page-app
