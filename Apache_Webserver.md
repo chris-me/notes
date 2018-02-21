@@ -78,6 +78,12 @@ EXPOSE 80
 CMD ["apache2ctl", "-DFOREGROUND"]
 ```
 
+#### ioncube.ini
+
+```ini
+zend_extension = /usr/local/ioncube/ioncube_loader_lin_7.0.so
+```
+
 ## Virtual Hosts Configuration
 
 ### Single Page Applications
