@@ -1,6 +1,7 @@
 - [Centos 7 Installation with Virtual Host](#centos-7-installation-with-virtual-host)
-- [Single Page Application Virtual Hosts](#single-page-application-virtual-hosts)
-- [Websockets (Socket.io) Virtual Hosts](#websockets-socketio-virtual-hosts)
+- [Virtual Hosts Configuration](#virtual-hosts-configuration)
+  - [Single Page Application Virtual Hosts](#single-page-applications)
+  - [Websockets (Socket.io) Virtual Hosts](#websockets-socketio)
 
 ## Centos 7 Installation with Virtual Host
 
@@ -35,7 +36,9 @@ sudo ln -s /etc/httpd/sites-available/z_mysite.conf /etc/httpd/sites-enabled/
 sudo systemctl restart httpd.service
 ```
 
-## Single Page Application Virtual Hosts
+## Virtual Hosts Configuration
+
+### Single Page Applications
 
 https://stackoverflow.com/questions/31744657/vhosts-conf-for-single-page-app
 
@@ -60,7 +63,7 @@ https://stackoverflow.com/questions/31744657/vhosts-conf-for-single-page-app
 ```
 
 
-## Websockets (Socket.io) Virtual Hosts
+### Websockets (Socket.io)
 
 [stackoverflow](https://stackoverflow.com/questions/27526281/websockets-and-apache-proxy-how-to-configure-mod-proxy-wstunnel/27534443#27534443
 )
