@@ -1,9 +1,13 @@
-- [Centos 7 Installation with Virtual Host](#centos-7-installation-with-virtual-host)
+- [Installation](#installation)
+  - [Centos 7 Installation with Virtual Host](#centos-7-installation-with-virtual-host)
+  - [Docker](#docker)
 - [Virtual Hosts Configuration](#virtual-hosts-configuration)
   - [Single Page Application Virtual Hosts](#single-page-applications)
   - [Websockets (Socket.io) Virtual Hosts](#websockets-socketio)
 
-## Centos 7 Installation with Virtual Host
+## Installation
+
+### Centos 7 Installation with Virtual Host
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-7
 
@@ -34,6 +38,44 @@ sudo ln -s /etc/httpd/sites-available/00-default.conf /etc/httpd/sites-enabled/
 sudo vi /etc/httpd/sites-available/z_mysite.conf
 sudo ln -s /etc/httpd/sites-available/z_mysite.conf /etc/httpd/sites-enabled/
 sudo systemctl restart httpd.service
+```
+
+### Docker
+
+Apache with PHP (and ionCube Extension) in Ubuntu Docker Container
+
+#### Dockerfile
+
+```dockerfile
+FROM ubuntu:16.04
+
+ENV IONCUBE_DOWNLOAD_URL https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
+
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+    software-properties-common \
+    python-software-properties \
+    bzip2 unzip vim wget curl libxml2-dev git mysql-client \
+    apache2 apache2-utils libapache2-mod-php php-mbstring \
+    php-cli php-gd php-mysql php-mcrypt php-ldap \
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+
+RUN wget ${IONCUBE_DOWNLOAD_URL} -O /tmp/ioncube_loaders.tar.gz
+
+RUN tar xvzfC /tmp/ioncube_loaders.tar.gz /tmp/ \
+    && rm /tmp/ioncube_loaders.tar.gz \
+    && mkdir -p /usr/local/ioncube \
+    && cp /tmp/ioncube/ioncube_loader_* /usr/local/ioncube \
+    && rm -rf /tmp/ioncube
+
+COPY 00-ioncube.ini /etc/php/7.0/apache2/conf.d/00-ioncube.ini
+COPY 00-ioncube.ini /etc/php/7.0/cli/conf.d/00-ioncube.ini
+
+VOLUME /var/www/html
+WORKDIR /var/www/html
+
+EXPOSE 80
+CMD ["apache2ctl", "-DFOREGROUND"]
 ```
 
 ## Virtual Hosts Configuration
