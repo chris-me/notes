@@ -1,6 +1,6 @@
 - [Centos 7 Installation with Virtual Host](#centos-7-installation-with-virtual-host)
 - [Single Page Application Virtual Hosts](#single-page-application-virtual-hosts)
-- [Websockets (Socket.io) Virtual Hosts](#websockets-socket-io-virtual-hosts)
+- [Websockets (Socket.io) Virtual Hosts](#websockets-socketio-virtual-hosts)
 
 ## Centos 7 Installation with Virtual Host
 
