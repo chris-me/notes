@@ -3,6 +3,7 @@
   - [Apache HttpComponents](#apache-httpcomponents)
   - [CloudBoost](#cloudBoost)
   - [SQLITE JDBC Drivers](#sqlite-jdbc-drivers)
+- [Datatypes](#datatypes)
 - [Snippets](#snippets)
 - [Links](#links)
 
@@ -32,6 +33,19 @@ Maven POM:
 ## SQLITE JDBC Drivers
 
 https://bitbucket.org/xerial/sqlite-jdbc/downloads/
+
+# Datatypes
+
+| Type    | Value range                                                                |
+|---------|----------------------------------------------------------------------------|
+| boolean | true or false                                                              |
+| char    | 16-Bit-Unicode (0x0000 … 0xFFFF)                                           |
+| byte    | –2^7 to 2^7 – 1 (–128 … 127)                                               |
+| short   | –2^15 to 2^15 – 1 (–32.768 … 32.767)                                       |
+| int     | –2^31 to 2^31 – 1 (–2.147.483.648 … 2.147.483.647)                         |
+| long    | –2^63 to 2^63 – 1 (–9.223.372.036.854.775.808 … 9.223.372.036.854.775.807) |
+| float   | 1,40239846E–45f … 3,40282347E+38f                                          |
+| double  | 4,94065645841246544E–324 … 1,79769131486231570E+308                        |
 
 # Snippets
 
