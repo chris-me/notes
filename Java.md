@@ -55,6 +55,14 @@ https://bitbucket.org/xerial/sqlite-jdbc/downloads/
 String userHome = System.getProperty("user.home");
 ```
 
+## Read User input from console
+
+```java
+String name = new java.util.Scanner( System.in ).nextLine();
+int age = new java.util.Scanner( System.in ).nextInt();
+double value = new java.util.Scanner( System.in ).nextDouble();
+```
+
 # Links
 
 * Swing / Threading
