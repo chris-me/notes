@@ -4,6 +4,7 @@
   - [CloudBoost](#cloudBoost)
   - [SQLITE JDBC Drivers](#sqlite-jdbc-drivers)
 - [Datatypes](#datatypes)
+- [Access Modifiers](#access-modifiers)
 - [Snippets](#snippets)
 - [Links](#links)
 
@@ -46,6 +47,15 @@ https://bitbucket.org/xerial/sqlite-jdbc/downloads/
 | long    | –2^63 to 2^63 – 1 (–9.223.372.036.854.775.808 … 9.223.372.036.854.775.807) | 64 Bit |
 | float   | 1,40239846E–45f … 3,40282347E+38f                                          | 32 Bit |
 | double  | 4,94065645841246544E–324 … 1,79769131486231570E+308                        | 64 Bit |
+
+# Access Modifiers
+
+| Modifier    | Class | Package | Subclass (same pkg) | Subclass (diff pkg) | World |
+|-------------|-------|---------|---------------------|---------------------|-------|
+| public      | +     | +       | +                   | +                   | +     |
+| protected   | +     | +       | +                   | +                   |       |
+| no modifier | +     | +       | +                   |                     |       |
+| private     | +     |         |                     |                     |       |
 
 # Snippets
 
