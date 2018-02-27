@@ -8,6 +8,7 @@
   - [Ethereum](Ethereum.md)
   - [Wallet_Applications](Wallet_Applications.md)
 - [Elasticsearch_Logstash_Kibana_Filebeat](Elasticsearch_Logstash_Kibana_Filebeat.md)
+- [Eclipse IDE](Eclipse_IDE.md)
 - [FeathersJS](FeathersJS.md)
 - [git](git.md)
 - [GitLab](GitLab.md)
