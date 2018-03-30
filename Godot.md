@@ -1,4 +1,5 @@
 - [Scripting](#scripting)
+- [Snippets](#snippets)
 
 ## Scripting
 
@@ -33,4 +34,25 @@ func _process(delta):
 func _physics_process(delta):
     # This is called every physics frame.
     pass
+```
+
+## Snippets
+
+### FPS Counter Label
+
+```python
+extends Label
+
+var second_counter = 0
+var frame_counter = 0
+var fps = 0
+
+func _process(delta):
+	second_counter += delta
+	frame_counter += 1
+	if(second_counter >= 1):
+		fps = frame_counter
+		second_counter = 0
+		frame_counter = 0
+	text = str(fps)
 ```
