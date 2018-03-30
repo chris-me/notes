@@ -54,5 +54,5 @@ func _process(delta):
 		fps = frame_counter
 		second_counter = 0
 		frame_counter = 0
-	text = str(fps)
+	text = "FPS: " + str(fps)
 ```
