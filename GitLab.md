@@ -1,5 +1,5 @@
 - [GitLab CI](#gitLab-ci)
-- [GitLab Docker Integration](#gitlab-docker-integration)
+- [GitLab Docker](#gitlab-docker)
 
 # GitLab CI
 
