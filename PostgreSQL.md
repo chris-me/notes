@@ -24,10 +24,12 @@ https://hub.docker.com/r/dpage/pgadmin4/
 
 ```bash
 #!/bin/bash
-docker run --name pgadmin4 \
+docker run --detach \
+    --name pgadmin4 \
+    --hostname pgadmin4 \
+    --volume pgadmin-data:/var/lib/pgadmin \
     -p 8080:80 \
     -e "PGADMIN_DEFAULT_EMAIL=foo@bar.com" \
-    -e "PGADMIN_DEFAULT_PASSWORD=foobar" \
-    --detach \
+    -e "PGADMIN_DEFAULT_PASSWORD=foobar123" \
     dpage/pgadmin4
 ```
