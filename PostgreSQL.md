@@ -8,10 +8,13 @@ https://hub.docker.com/_/postgres/
 
 ```bash
 #!/bin/bash
-docker run --name postgres01 \
-    -e POSTGRES_PASSWORD=foobar \
+docker run --detach \
+    --name postgresql \
+    --hostname postgresql \
+    -e POSTGRES_PASSWORD=foobar123 \
     --publish 5432:5432 \
-    --detach \
+    --restart=unless-stopped \
+    --volume postgresql-data:/var/lib/postgresql/data \
     postgres
 ```
 
