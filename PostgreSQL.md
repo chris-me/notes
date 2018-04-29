@@ -5,6 +5,7 @@
   - [pgadmin4](#pgadmin4)
 - [psql](#psql)
 - [Snippets](#snippets)
+  - [Users / Permissions](#users--permissions)
 
 ## Docker
 
