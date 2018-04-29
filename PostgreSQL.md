@@ -70,6 +70,8 @@ docker run --detach \
 
 ### pgadmin4
 
+Setup an a pgadmin4 container listening only on localhost for using with a reverse proxy serving over https.
+
 https://hub.docker.com/r/dpage/pgadmin4/
 
 ```bash
