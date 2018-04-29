@@ -9,7 +9,7 @@
 
 ### PostgreSQL Server
 
-Set up a PostgreSQL server with forced SSL connections.
+Set up a PostgreSQL server with forced SSL connections. Remember to change the initial passwords immediately before using.
 
 #### Links
 
@@ -77,12 +77,15 @@ https://hub.docker.com/r/dpage/pgadmin4/
 docker run --detach \
     --name pgadmin4 \
     --hostname pgadmin4 \
+    --link postgresql:postgresql \
     --volume pgadmin-data:/var/lib/pgadmin \
     -p 8080:80 \
     -e "PGADMIN_DEFAULT_EMAIL=foo@bar.com" \
     -e "PGADMIN_DEFAULT_PASSWORD=foobar123" \
     dpage/pgadmin4
 ```
+
+
 
 ## psql
 
