@@ -3,6 +3,7 @@
 - [Docker](#docker)
   - [PostgreSQL Server](#postgresql-server)
   - [pgadmin4](#pgadmin4)
+- [psql](#psql)
 
 ## Docker
 
@@ -36,4 +37,19 @@ docker run --detach \
     -e "PGADMIN_DEFAULT_EMAIL=foo@bar.com" \
     -e "PGADMIN_DEFAULT_PASSWORD=foobar123" \
     dpage/pgadmin4
+```
+
+## psql
+
+
+List databases
+
+```bash
+\l
+```
+
+Connect to a database
+
+```bash
+\c mydatabase
 ```
