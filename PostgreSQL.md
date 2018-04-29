@@ -57,11 +57,15 @@ Container run script:
 docker run --detach \
     --name postgresql \
     --hostname postgresql \
-    -e POSTGRES_PASSWORD=foobar123 \
-    --publish 5432:5432 \
+    -e POSTGRES_PASSWORD=s3cr3t \
+    --publish 25432:5432 \
     --restart=unless-stopped \
+    --volume ~/postgres-config/my-postgres.conf:/etc/postgresql/postgresql.conf \
+    --volume ~/postgres-config/pg_hba.conf:/var/lib/postgresql/data/pg_hba.conf \
+    --volume ~/postgres-config/server.key:/var/lib/postgresql/data/server.key \
+    --volume ~/postgres-config/server.crt:/var/lib/postgresql/data/server.crt \
     --volume postgresql-data:/var/lib/postgresql/data \
-    postgres
+    postgres:10.3 -c 'config_file=/etc/postgresql/postgresql.conf'
 ```
 
 ### pgadmin4
