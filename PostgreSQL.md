@@ -14,6 +14,7 @@ Set up a PostgreSQL server with forced SSL connections.
 #### Links
 
 https://hub.docker.com/_/postgres/
+
 https://markwoodbridge.com/2017/08/16/postgres-docker-ssl.html
 
 #### Installation steps
