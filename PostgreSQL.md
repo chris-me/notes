@@ -42,7 +42,7 @@ openssl req -new -text -passout pass:abcd -subj /CN=localhost -out server.req
 openssl rsa -in privkey.pem -passin pass:abcd -out server.key
 openssl req -x509 -in server.req -text -key server.key -out server.crt
 chmod og-rwx server.key
-# configuration files
+# generate and adjust configuration files
 docker run -i --rm postgres cat /usr/share/postgresql/postgresql.conf.sample > my-postgres.conf
 docker run -i --volume postgresql-data:/var/lib/postgresql/data --rm postgres:10.3 cat /var/lib/postgresql/data/pg_hba.conf > pg_hba.conf
 echo "ssl = on" >> my-postgres.conf
