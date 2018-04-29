@@ -18,7 +18,7 @@ https://markwoodbridge.com/2017/08/16/postgres-docker-ssl.html
 
 #### Installation steps
 
-Run once to create initial database files:
+Run once to create initial database files / initial postgresql-data volume:
 
 ```bash
 docker run --detach \
