@@ -7,7 +7,9 @@
 
 ## Docker
 
-### PostgreSQL Server w/ SSL (forced)
+### PostgreSQL Server
+
+Set up a PostgreSQL server with forced SSL connections.
 
 #### Links
 
