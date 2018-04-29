@@ -4,6 +4,7 @@
   - [PostgreSQL Server](#postgresql-server)
   - [pgadmin4](#pgadmin4)
 - [psql](#psql)
+- [Snippets](#snippets)
 
 ## Docker
 
@@ -102,4 +103,14 @@ Connect to a database
 
 ```bash
 \c mydatabase
+```
+
+## Snippets
+
+### Users / Permissions
+
+```sql
+CREATE DATABASE database_name;
+CREATE USER my_username WITH PASSWORD 'my_password';
+GRANT ALL PRIVILEGES ON DATABASE "database_name" to my_username;
 ```
