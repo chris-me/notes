@@ -16,18 +16,6 @@ https://markwoodbridge.com/2017/08/16/postgres-docker-ssl.html
 
 #### Installation steps
 
-```bash
-mkdir -p ~/postgres-config && cd ~/postgres-config
-# Self signed SSL certificate
-openssl req -new -text -passout pass:abcd -subj /CN=localhost -out server.req
-openssl rsa -in privkey.pem -passin pass:abcd -out server.key
-openssl req -x509 -in server.req -text -key server.key -out server.crt
-chmod og-rwx server.key
-# configuration files
-docker run -i --rm postgres cat /usr/share/postgresql/postgresql.conf.sample > my-postgres.conf
-cd ~
-```
-
 Run once to create initial database files:
 
 ```bash
@@ -42,6 +30,20 @@ docker run --detach \
 docker logs -f postgresql
 docker stop postgresql
 docker rm postgresql
+```
+
+Create configuration files
+
+```bash
+mkdir -p ~/postgres-config && cd ~/postgres-config
+# Self signed SSL certificate
+openssl req -new -text -passout pass:abcd -subj /CN=localhost -out server.req
+openssl rsa -in privkey.pem -passin pass:abcd -out server.key
+openssl req -x509 -in server.req -text -key server.key -out server.crt
+chmod og-rwx server.key
+# configuration files
+docker run -i --rm postgres cat /usr/share/postgresql/postgresql.conf.sample > my-postgres.conf
+cd ~
 ```
 
 Container run script:
