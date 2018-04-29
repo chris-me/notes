@@ -46,7 +46,7 @@ chmod og-rwx server.key
 docker run -i --rm postgres cat /usr/share/postgresql/postgresql.conf.sample > my-postgres.conf
 docker run -i --volume postgresql-data:/var/lib/postgresql/data --rm postgres:10.3 cat /var/lib/postgresql/data/pg_hba.conf > pg_hba.conf
 echo "ssl = on" >> my-postgres.conf
-echo "hostnossl all all all reject" >> pg_hba.conf
+sed -i -- 's/host all all all md5/hostssl all all all md5/g' pg_hba.conf
 cd ~
 ```
 
