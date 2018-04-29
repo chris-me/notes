@@ -24,9 +24,6 @@ Run once to create initial database files:
 docker run --detach \
     --name postgresql \
     --hostname postgresql \
-    -e POSTGRES_PASSWORD=changeme \
-    --publish 25432:5432 \
-    --restart=unless-stopped \
     --volume postgresql-data:/var/lib/postgresql/data \
     postgres:10.3
 docker logs -f postgresql
