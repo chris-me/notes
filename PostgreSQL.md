@@ -79,7 +79,7 @@ docker run --detach \
     --hostname pgadmin4 \
     --link postgresql:postgresql \
     --volume pgadmin-data:/var/lib/pgadmin \
-    -p 8080:80 \
+    --publish 127.0.0.1:10080:80 \
     -e "PGADMIN_DEFAULT_EMAIL=foo@bar.com" \
     -e "PGADMIN_DEFAULT_PASSWORD=foobar123" \
     dpage/pgadmin4
