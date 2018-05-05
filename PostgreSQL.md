@@ -2,6 +2,7 @@
 
 - [Docker](#docker)
   - [PostgreSQL Server](#postgresql-server)
+    - [Backup / Restore](#backup-restore)
   - [pgadmin4](#pgadmin4)
 - [psql](#psql)
 - [Snippets](#snippets)
@@ -68,6 +69,22 @@ docker run --detach \
     --volume ~/postgres-config/server.crt:/var/lib/postgresql/data/server.crt \
     --volume postgresql-data:/var/lib/postgresql/data \
     postgres:10.3 -c 'config_file=/etc/postgresql/postgresql.conf'
+```
+
+#### Backup / Restore
+
+https://stackoverflow.com/questions/24718706/backup-restore-a-dockerized-postgresql-database
+
+Backup:
+
+```bash
+docker exec -t your-db-container pg_dumpall -c -U postgres > dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql
+```
+
+Restore:
+
+```bash
+cat your_dump.sql | docker exec -i your-db-container psql -U postgres
 ```
 
 ### pgadmin4
