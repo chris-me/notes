@@ -2,7 +2,7 @@
 
 - [Docker](#docker)
   - [PostgreSQL Server](#postgresql-server)
-    - [Backup / Restore](#backup-restore)
+    - [Backup / Restore](#backup--restore)
   - [pgadmin4](#pgadmin4)
 - [psql](#psql)
 - [Snippets](#snippets)
