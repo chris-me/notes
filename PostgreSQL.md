@@ -73,6 +73,8 @@ docker run --detach \
 
 #### Backup / Restore
 
+##### All Databases
+
 https://stackoverflow.com/questions/24718706/backup-restore-a-dockerized-postgresql-database
 
 Backup:
@@ -86,6 +88,23 @@ Restore:
 ```bash
 cat your_dump.sql | docker exec -i your-db-container psql -U postgres
 ```
+
+##### Single Database
+
+https://www.digitalocean.com/community/tutorials/how-to-backup-postgresql-databases-on-an-ubuntu-vps
+
+Backup:
+
+```bash
+docker exec -t your-db-container pg_dump -c -U dbname > dump_dbname_`date +%d-%m-%Y"_"%H_%M_%S`.sql
+```
+
+Restore:
+
+```bash
+cat your_dump.sql | docker exec -i your-db-container psql -U postgres dbname
+```
+
 
 ### pgadmin4
 
