@@ -1,5 +1,6 @@
 - [Classes](#classes)
 - [Iterating Components](#iterating-components)
+- [Prop Types](#prop-types)
 
 
 ## Classes
@@ -51,4 +52,24 @@ Then call it somewhere in a render function
 
 ```javascript
 {this.renderCamps()}
+```
+
+## Prop Types
+
+### Require a prop type based on presence of another
+
+```javascript
+Card.propTypes = {
+  imageUrl: PropTypes.string,
+  imagePlaceholder: function(props, propName, componentName) {
+    if (
+      props.hasOwnProperty('imageUrl') &&
+      !props.hasOwnProperty('imagePlaceholder')
+    ) {
+      return new Error(
+        'If the prop `imageUrl` is given, the prop `imagePlaceholder` is required in `Card`.'
+      );
+    }
+  }
+};
 ```
