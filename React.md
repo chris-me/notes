@@ -55,7 +55,7 @@ onChange={this.handleImageChange} />
       );
     } else {
       return (
-        <h4>Not Camps found</h4>
+        <h4>No Camps found</h4>
       )
     }
   }
