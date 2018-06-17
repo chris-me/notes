@@ -1,22 +1,35 @@
-- [Classes](#classes)
+- [Image Processing](#image-processing)
 - [Iterating Components](#iterating-components)
 - [Prop Types](#prop-types)
 
 
-## Classes
+## Image Processing
 
-## class properties + arrow function syntax
+Encode an image / a file into a base64 string
 
 ```javascript
-class InputExample extends React.Component {
-  state = { text: '' }
-  change = ev => this.setState({text: ev.target.value})
-
-  render() {
-    let {text} = this.state
-    return (<input type="text" value={text} onChange={this.change} />);
+// Somewhere in a form
+<Input
+type="file"
+name="picture"
+id="picture"
+onChange={this.handleImageChange} />
+              
+// event handler      
+  handleImageChange = async (e) => {
+    // TODO check it's really an image
+    e.preventDefault();
+    let reader = new FileReader();
+    let file = e.target.files[0];
+    // console.log(file);
+    reader.onloadend = () => {
+      this.setState({
+        file: file,
+        imageAsBase64: reader.result
+      });
+    }
+    reader.readAsDataURL(file);
   }
-}
 ```
 
 ## Iterating Components
