@@ -1,5 +1,7 @@
 ## Wrapping main content
 
+https://github.com/mui-org/material-ui/issues/7466
+
 ```javascript
 const MainWrapper = ({ classes }) => (
   <React.Fragment>
