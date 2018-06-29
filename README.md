@@ -3,6 +3,7 @@
 - [Apache_Tomcat](Apache_Tomcat.md)
 - [Apache_Webserver](Apache_Webserver.md)
 - [Apple](Apple.md)
+- [Changelogs](Changelogs.md)
 - Coins
   - [Bitcoin_QT_Client](Bitcoin_QT_Client.md)
   - [Ethereum](Ethereum.md)
