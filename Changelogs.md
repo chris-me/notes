@@ -4,3 +4,4 @@
 | @feathersjs/client | https://github.com/feathersjs/client/blob/master/CHANGELOG.md |
 | @feathersjs/authentication | https://github.com/feathersjs/authentication/blob/master/CHANGELOG.md |
 | mongoose | https://github.com/Automattic/mongoose/blob/master/History.md |
+| react | https://github.com/facebook/react/blob/master/CHANGELOG.md |
