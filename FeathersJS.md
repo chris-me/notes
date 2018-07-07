@@ -1,5 +1,12 @@
+- [REST Requests](#rest-requests)
 - [Service Query Examples](#service-query-examples)
 - [Validation](#validation)
+
+# REST Requests
+
+```bash
+curl 'http://localhost:3030/auth/local' -H 'Content-Type: application/json' --data-binary '{ "email": "user1@example.com", "password": "foobar" }'
+```
 
 # Service Query Examples
 
