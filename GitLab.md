@@ -55,15 +55,12 @@ a2enmod proxy_http
 
 Apache Configuration example:
 
-```
+```apache
 <VirtualHost *:80>
-    ServerName git.mydomain.com
-    #ServerAlias www.domain.tld 
-    ProxyPass / http://localhost:10080/
+    ServerName gitlab.mydomain.com
+    AllowEncodedSlashes NoDecode # added after WebIDE problems
+    ProxyPass / http://localhost:10080/ nocanon # nocanon added after WebIDE problems
     ProxyPassReverse / http://localhost:10080/
-    RewriteEngine on
-    RewriteCond %{SERVER_NAME} =git.mydomain.com
-    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,QSA,R=permanent]
 </VirtualHost>
 ```
 
