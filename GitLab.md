@@ -75,13 +75,14 @@ sudo ufw allow 10080/tcp
 
 ```bash
 docker run --detach \
-    --hostname git.mydomain.com \
-    --publish 127.0.0.1:10080:80 --publish 10022:22 \
+    --hostname gitlab.mydomain.com \
+    --publish 127.0.0.1:10080:80 \
+    --publish 22:22 \
     --name gitlab \
     --restart=unless-stopped \
-    --volume gitlab-config:/etc/gitlab \
-    --volume gitlab-logs:/var/log/gitlab \
-    --volume gitlab-data:/var/opt/gitlab \
+    --volume /docker-volumes/gitlab-config:/etc/gitlab \
+    --volume /docker-volumes/gitlab-logs:/var/log/gitlab \
+    --volume /docker-volumes/gitlab-data:/var/opt/gitlab \
     gitlab/gitlab-ce:latest
 ```
 
