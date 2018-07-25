@@ -2,15 +2,27 @@
 
 https://jenkins.io/doc/book/installing/#downloading-and-running-jenkins-in-docker
 
+Docker start script:
+
 ```bash
 docker run --detach \
   --user root \
-  --rm \
-  --publish 8080:8080 \
-  --volume jenkins-data:/var/jenkins_home \
+  --restart=unless-stopped \
+  --publish 10085:8080 \
+  --volume /docker-volumes/jenkins-data:/var/jenkins_home \
   --volume /var/run/docker.sock:/var/run/docker.sock \
   --name jenkins \
   jenkinsci/blueocean
+```
+
+Apache config:
+
+```apache
+<VirtualHost *:80>
+    ServerName jenkins.example.com
+    ProxyPass / http://localhost:10085/
+    ProxyPassReverse / http://localhost:10085/
+</VirtualHost>
 ```
 
 ## Example Workflow
