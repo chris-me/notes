@@ -15,13 +15,22 @@ docker run --detach \
   jenkinsci/blueocean
 ```
 
-Apache config:
+Apache config (ssl):
 
 ```apache
-<VirtualHost *:80>
+<VirtualHost *:443>
     ServerName jenkins.example.com
-    ProxyPass / http://localhost:10085/
+    ProxyPass / http://localhost:10085/ nocanon
     ProxyPassReverse / http://localhost:10085/
+    ProxyRequests     Off
+    AllowEncodedSlashes NoDecode
+    # SSL Config goes here
+    RequestHeader set X-Forwarded-Proto "https"
+    RequestHeader set X-Forwarded-Port "443"
+    <Proxy http://localhost:10085/*>
+      Order deny,allow
+      Allow from all
+    </Proxy>
 </VirtualHost>
 ```
 
