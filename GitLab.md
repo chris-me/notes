@@ -33,6 +33,56 @@ docker run --detach \
 
 * the runner is now registered in gitlab
 
+## Workflow for deploying to remote server with SSH
+
+https://docs.gitlab.com/ee/ci/ssh_keys/README.html
+
+- On the server / user that gitlab will login to, run:
+
+```bash
+ssh-keygen
+```
+
+- Add the own public key to the authorized_keys file and adjust permissions
+
+```bash
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 700 ~/.ssh/*
+```
+
+- Add the private key as a variable named SSH_PRIVATE_KEY to your project
+
+- Adjust / use basic .gitlab-ci.yml file:
+
+```yaml
+image: node:10.6
+
+variables:
+  DEPLOY_IP: "1.2.3.4"
+  DEPLOY_SSH_PORT: "22"
+  DEPLOY_USER: "my-deploy-user"
+
+before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+stages:
+  - deploy
+
+deploy_backend:
+  stage: deploy
+  only:
+    - master
+  script:
+    - ssh -p $DEPLOY_SSH_PORT -l $DEPLOY_USER $DEPLOY_IP uname -a
+```
+
+
 ## Delete an environment
 
 https://docs.gitlab.com/ce/api/environments.html#delete-an-environment
@@ -47,26 +97,6 @@ curl --request DELETE --header "PRIVATE-TOKEN: mytoken" "https://gitlab.example.
 ```
 
 - Deleting can take up to several minutes
-
-## SSH Authentication
-
-https://docs.gitlab.com/ee/ci/ssh_keys/README.html
-
-- On the server that gitlab must login to, run:
-
-```bash
-ssh-keygen
-```
-
-- Add the own public key to the authorized_keys file and adjust permissions
-
-```bash
-cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-chmod 700 ~/.ssh
-chmod 700 ~/.ssh/*
-```
-
-- Add the private key as a secret variable to your project and proceed w/ link above
 
 # GitLab Docker
 
