@@ -3,6 +3,36 @@
 
 # GitLab CI
 
+## Setup runner
+
+```bash
+docker run --name gitlab-runner \
+    --rm \
+    --volume /docker-volumes/gitlab-runner-config:/etc/gitlab-runner \
+    --volume /var/run/docker.sock:/var/run/docker.sock \
+    -it \
+    gitlab/gitlab-runner:latest \
+    register
+```
+
+* enter info from glitlab -> admin -> runners
+* executor = docker
+
+* start runner script:
+
+```bash
+#!/bin/bash
+docker run --detach \
+    --name gitlab-runner \
+    --restart=unless-stopped \
+    --volume /docker-volumes/gitlab-runner-config:/etc/gitlab-runner \
+    --volume /var/run/docker.sock:/var/run/docker.sock \
+    -it \
+    gitlab/gitlab-runner:latest
+```
+
+* the runner is now registered in gitlab
+
 ## Delete an environment
 
 https://docs.gitlab.com/ce/api/environments.html#delete-an-environment
