@@ -2,6 +2,18 @@
 - [Service Query Examples](#service-query-examples)
 - [Validation](#validation)
 
+# Feathers behind Apache Reverse Proxy
+
+```apache
+ServerName myservice.example.com
+RewriteEngine On
+RewriteCond %{REQUEST_URI}  ^/socket.io            [NC]
+RewriteCond %{QUERY_STRING} transport=websocket    [NC]
+RewriteRule /(.*)           ws://localhost:3030/$1 [P,L]
+ProxyPass / http://localhost:3030/
+ProxyPassReverse / http://localhost:3030/
+```
+
 # REST Requests
 
 ```bash
