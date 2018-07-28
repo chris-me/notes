@@ -1,3 +1,4 @@
+- [Feathers behind Apache Reverse Proxy](##feathers-behind-apache-reverse-proxy)
 - [REST Requests](#rest-requests)
 - [Service Query Examples](#service-query-examples)
 - [Validation](#validation)
