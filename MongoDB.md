@@ -15,7 +15,7 @@ sudo mv mongodb.pem /docker-volumes/mongo-config/
 
 ### start script
 
-Important: user is only created if no database exists at start time, otherwise the parameters for username and password are ignored
+Important: user is only created if no database exists at start time, otherwise the parameters for username and password are ignored. The database is then automatically running with "auth" parameter enabled, e. g. only authenticated / authorized users can interact with the database.
 
 ```bash
 #!/bin/bash
