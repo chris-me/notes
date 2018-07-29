@@ -18,6 +18,7 @@ sudo mv mongodb.pem /docker-volumes/mongo-config/
 Important: user is only created if no database exists at start time, otherwise the parameters for username and password are ignored
 
 ```bash
+#!/bin/bash
 docker run --detach \
   --restart=unless-stopped \
   --publish 27017:27017 \
