@@ -8,6 +8,7 @@
   - [Bitcoin_QT_Client](Bitcoin_QT_Client.md)
   - [Ethereum](Ethereum.md)
   - [Wallet_Applications](Wallet_Applications.md)
+- [Docker](Docker.md)
 - [Elasticsearch_Logstash_Kibana_Filebeat](Elasticsearch_Logstash_Kibana_Filebeat.md)
 - [Eclipse IDE](Eclipse_IDE.md)
 - [FeathersJS](FeathersJS.md)
