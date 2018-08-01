@@ -13,9 +13,11 @@ rm mongodb-cert.key mongodb-cert.crt
 sudo mv mongodb.pem /docker-volumes/mongo-config/
 ```
 
-### start script
+### Running
 
 Important: user is only created if no database exists at start time, otherwise the parameters for username and password are ignored. The database is then automatically running with "auth" parameter enabled, e. g. only authenticated / authorized users can interact with the database.
+
+#### Bash Script
 
 ```bash
 #!/bin/bash
@@ -30,6 +32,30 @@ docker run --detach \
   mongo:4 \
   --sslMode requireSSL --sslPEMKeyFile /data/configdb/mongodb.pem
 ```
+
+#### Compose file
+
+```yml
+version: '3.3'
+
+services:
+  mongo:
+    container_name: mongo
+    image: mongo:4
+    volumes:
+      - /docker-volumes/mongo-data:/data/db
+      - /docker-volumes/mongo-config:/data/configdb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - "27017:27017"
+    command: --sslMode requireSSL --sslPEMKeyFile /data/configdb/mongodb.pem
+
+
+```
+
 
 ## Authentication / Authorization
 
