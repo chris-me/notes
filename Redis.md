@@ -1,23 +1,13 @@
-# Redis
+## Commands
 
-## Docker
+### Delete all Keys beginning with 'foobar:'
 
-### Create container
-
-```bash
-#!/bin/bash
-
-docker run --detach \
-  --publish 6379:6379 \
-  --volume redis-data:/data \
-  --restart=unless-stopped \
-  --name redis \
-  redis:alpine redis-server --appendonly yes
+```
+EVAL "return redis.call('del', 'defaultKey', unpack(redis.call('keys', ARGV[1])))" 0 socket:*
 ```
 
-### Flush database
+### Delete all the keys of all the existing databases (async)
 
-```bash
-#!/bin/bash
-docker run -it --link redis:redis --rm redis:alpine redis-cli -h redis FLUSHALL
+```
+FLUSHALL
 ```
