@@ -94,8 +94,8 @@ https://stackoverflow.com/questions/31744657/vhosts-conf-for-single-page-app
 <VirtualHost *:80>
   ServerName my.app.com
   DirectoryIndex index.html
-  DocumentRoot /export/www/app
-  <Directory "/export/www/app">
+  DocumentRoot /var/www/app
+  <Directory "/var/www/app">
     order allow,deny
     allow from all
 
@@ -135,8 +135,5 @@ a2enmod proxy_wstunnel
 
     ProxyPass / http://localhost:3030/
     ProxyPassReverse / http://localhost:3030/
-RewriteEngine on
-RewriteCond %{SERVER_NAME} =api.myserver.com
-RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,QSA,R=permanent]
 </VirtualHost>
 ```
