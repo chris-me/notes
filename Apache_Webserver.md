@@ -119,8 +119,8 @@ https://stackoverflow.com/questions/31744657/vhosts-conf-for-single-page-app
 Assuming some socket.io backend is running on port 3030.
 
 ```bash
-a2enmod proxy
-a2enmod proxy_wstunnel
+sudo a2enmod proxy
+sudo a2enmod proxy_wstunnel
 ```
 
 
