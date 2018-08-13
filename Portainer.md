@@ -2,6 +2,26 @@
 
 https://portainer.io/install.html
 
+
+## docker-compose
+
+```
+version: '3'
+
+services:
+  portainer:
+    image: portainer/portainer
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer-data:/data \
+    ports:
+      - "9000:9000"
+
+volumes:
+  portainer-data:
+```
+
+## Bash script
 ```bash
 #!/bin/bash
 
