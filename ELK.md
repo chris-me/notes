@@ -7,6 +7,7 @@ https://elk-docker.readthedocs.io/
 
 ```bash
 sudo sysctl -w vm.max_map_count=262144
+sudo /bin/su -c "echo 'vm.max_map_count=262144' >> /etc/sysctl.conf"
 ```
 
 ## docker-compose
