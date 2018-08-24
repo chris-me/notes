@@ -24,7 +24,7 @@ sudo vi /etc/httpd/conf/httpd.conf
 # Add this line at the end:
 IncludeOptional sites-enabled/*.conf
 # Create a default virtual hosts file:
-sudo vi /etc/httpd/sites-available/00-default
+sudo vi /etc/httpd/sites-available/00-default.conf
 # Content:
 <VirtualHost *:80>
     ServerName www.example2.com
