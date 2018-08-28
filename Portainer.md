@@ -13,7 +13,7 @@ services:
     image: portainer/portainer
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - portainer-data:/data \
+      - portainer-data:/data
     ports:
       - "9000:9000"
 
