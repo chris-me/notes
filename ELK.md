@@ -1,4 +1,5 @@
 - [Docker](#docker)
+- [Logstash](#logstash)
 - [Links](#links)
 
 # Docker
@@ -42,6 +43,26 @@ dummy entry 2
 
 http://yourhost:5601
 
+# Logstash
+
+## Grok pattern examples
+
+```
+input {
+  beats {
+    host => "0.0.0.0"
+    port => 31312
+  }
+}
+filter {
+  grok {
+    match => { "message" => "%{TIMESTAMP_ISO8601};%{WORD:loglevel};%{WORD:request_type};%{UUID:request_id};%{IP:ipaddress};%{GREEDYDATA}" }
+  }
+  if ([message] =~ "calculateExtendedRouteResponse") {
+    drop {}
+  }
+}
+```
 
 # Links
 
