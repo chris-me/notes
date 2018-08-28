@@ -64,6 +64,12 @@ filter {
 }
 ```
 
+```
+if "_grokparsefailure" in [tags] {
+  drop { }
+}
+```
+
 # Links
 
 
