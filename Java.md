@@ -80,6 +80,10 @@ public class DBManager {
 
 # Snippets
 
+## Generate base64 String from Byte Array
+
+String b64 = Base64.getEncoder().encodeToString(byteArray);
+
 ## Get User Home Directory
 
 ```java
