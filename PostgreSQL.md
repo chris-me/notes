@@ -112,6 +112,8 @@ Setup an a pgadmin4 container listening only on localhost for using with a rever
 
 https://hub.docker.com/r/dpage/pgadmin4/
 
+bash script:
+
 ```bash
 #!/bin/bash
 docker run --detach \
@@ -123,6 +125,24 @@ docker run --detach \
     -e "PGADMIN_DEFAULT_EMAIL=foo@bar.com" \
     -e "PGADMIN_DEFAULT_PASSWORD=s3cr3t" \
     dpage/pgadmin4
+```
+
+docker-compose.yml:
+
+```ruby
+pgadmin:
+  image: dpage/pgadmin4
+  restart: unless-stopped
+  ports:
+    - "10080:80"
+  environment:
+    - PGADMIN_DEFAULT_EMAIL=foo@bar.com
+    - PGADMIN_DEFAULT_PASSWORD=foobar
+  volumes:
+    - pgadmin-data:/var/lib/pgadmin
+
+volumes:
+  pgadmin-data:
 ```
 
 
