@@ -8,6 +8,7 @@
   - [Bitcoin_QT_Client](Bitcoin_QT_Client.md)
   - [Ethereum](Ethereum.md)
   - [Wallet_Applications](Wallet_Applications.md)
+- [Divi](Divi.md)
 - [Docker](Docker.md)
 - [ELK](ELK.md)
 - [Eclipse IDE](Eclipse_IDE.md)
