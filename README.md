@@ -19,6 +19,7 @@
 - [Godot](Godot.md)
 - [Gogs–Go_Git_Service](Gogs.md)
 - [Google_Cloud_Storage](Google_Cloud_Storage.md)
+- [GraphQL](GraphQL.md)
 - [Java](Java.md)
 - [JavaFX](JavaFX.md)
 - [Java Servlet Security](Java_Servlet_Security.md)
