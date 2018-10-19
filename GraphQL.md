@@ -17,11 +17,12 @@ query {
 ## Mutations
 
 ```graphql
-query {
-  users(where: {
-    name_contains:"chris"
+mutation {
+  createUser(data: {
+    name:"chris",
+    email:"hey@cool.com"
   }) {
-    id
+    # the fields that will be returned:
     name
     email
   }
