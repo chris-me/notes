@@ -12,7 +12,7 @@
 
 ### PostgreSQL Server
 
-Set up a PostgreSQL server with forced SSL connections. Remember to change the initial passwords immediately after setup.
+Set up a PostgreSQL server with forced SSL connections. Remember to change the initial passwords immediately before using.
 
 #### Links
 
@@ -22,61 +22,35 @@ https://markwoodbridge.com/2017/08/16/postgres-docker-ssl.html
 
 #### Installation steps
 
+Run once to create initial database files / initial postgresql-data volume:
+
+```bash
+docker run --detach \
+    --name postgresql \
+    --hostname postgresql \
+    -e POSTGRES_PASSWORD=s3cr3t \
+    --volume postgresql-data:/var/lib/postgresql/data \
+    postgres:10.3
+docker logs -f postgresql
+docker stop postgresql
+docker rm postgresql
+```
+
 Create configuration files
 
 ```bash
-PGVERSION=10.5
-mkdir -p ~/docker-postgres/config && cd ~/docker-postgres/config
-# Create self signed SSL certificate
+mkdir -p ~/postgres-config && cd ~/postgres-config
+# Self signed SSL certificate
 openssl req -new -text -passout pass:abcd -subj /CN=localhost -out server.req
 openssl rsa -in privkey.pem -passin pass:abcd -out server.key
 openssl req -x509 -in server.req -text -key server.key -out server.crt
 chmod og-rwx server.key
 # generate and adjust configuration files
-docker run -i --rm postgres:$PGVERSION cat /usr/share/postgresql/postgresql.conf.sample > my-postgres.conf
-docker run -i --volume postgresql-data:/var/lib/postgresql/data --rm postgres:$PGVERSION cat /var/lib/postgresql/data/pg_hba.conf > pg_hba.conf
+docker run -i --rm postgres:10.3 cat /usr/share/postgresql/postgresql.conf.sample > my-postgres.conf
+docker run -i --volume postgresql-data:/var/lib/postgresql/data --rm postgres:10.3 cat /var/lib/postgresql/data/pg_hba.conf > pg_hba.conf
 echo "ssl = on" >> my-postgres.conf
-echo "hba_file = '/config/pg_hba.conf'" >> my-postgres.conf
-echo "ssl_cert_file = '/config/server.crt'" >> my-postgres.conf
-echo "ssl_key_file = '/config/server.key'" >> my-postgres.conf
 sed -i -- 's/host all all all md5/hostssl all all all md5/g' pg_hba.conf
-cd ..
-```
-
-save docker-compose.yml:
-
-```yml
-version: '3'
-
-services:
-  postgres:
-    image: postgres:10.5
-    restart: unless-stopped
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgresql-data:/var/lib/postgresql/data
-      - ./config/my-postgres.conf:/config/postgresql.conf
-      - ./config/pg_hba.conf:/config/pg_hba.conf
-      - ./config/server.key:/config/server.key
-      - ./config/server.crt:/config/server.crt
-    environment:
-      POSTGRES_PASSWORD: s3cr3t
-    command: -c 'config_file=/config/postgresql.conf'
-  pgadmin:
-    image: dpage/pgadmin4
-    restart: unless-stopped
-    ports:
-      - "8888:80"
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=foo@bar.com
-      - PGADMIN_DEFAULT_PASSWORD=foobar
-    volumes:
-      - pgadmin-data:/var/lib/pgadmin
-
-volumes:
-  postgresql-data:
-  pgadmin-data:
+cd ~
 ```
 
 Container run script:
