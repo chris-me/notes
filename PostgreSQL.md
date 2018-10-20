@@ -26,6 +26,16 @@ Create configuration files
 
 ```bash
 PGVERSION=10.5
+docker run --detach \
+    --name postgresql \
+    --hostname postgresql \
+    -e POSTGRES_PASSWORD=s3cr3t \
+    --volume postgresql-data:/var/lib/postgresql/data \
+    postgres:$PGVERSION
+sleep 5
+docker stop postgresql
+docker rm postgresql
+
 mkdir -p ~/docker-postgres/config && cd ~/docker-postgres/config
 # Create self signed SSL certificate
 openssl req -new -text -passout pass:abcd -subj /CN=localhost -out server.req
