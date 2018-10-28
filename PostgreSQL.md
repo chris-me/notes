@@ -30,7 +30,7 @@ docker run --detach \
     --hostname postgresql \
     -e POSTGRES_PASSWORD=s3cr3t \
     --volume postgresql-data:/var/lib/postgresql/data \
-    postgres:10.3
+    postgres:10.5
 docker logs -f postgresql
 docker stop postgresql
 docker rm postgresql
@@ -46,8 +46,8 @@ openssl rsa -in privkey.pem -passin pass:abcd -out server.key
 openssl req -x509 -in server.req -text -key server.key -out server.crt
 chmod og-rwx server.key
 # generate and adjust configuration files
-docker run -i --rm postgres:10.3 cat /usr/share/postgresql/postgresql.conf.sample > my-postgres.conf
-docker run -i --volume postgresql-data:/var/lib/postgresql/data --rm postgres:10.3 cat /var/lib/postgresql/data/pg_hba.conf > pg_hba.conf
+docker run -i --rm postgres:10.5 cat /usr/share/postgresql/postgresql.conf.sample > my-postgres.conf
+docker run -i --volume postgresql-data:/var/lib/postgresql/data --rm postgres:10.5 cat /var/lib/postgresql/data/pg_hba.conf > pg_hba.conf
 echo "ssl = on" >> my-postgres.conf
 sed -i -- 's/host all all all md5/hostssl all all all md5/g' pg_hba.conf
 cd ~
@@ -68,7 +68,7 @@ docker run --detach \
     --volume ~/postgres-config/server.key:/var/lib/postgresql/data/server.key \
     --volume ~/postgres-config/server.crt:/var/lib/postgresql/data/server.crt \
     --volume postgresql-data:/var/lib/postgresql/data \
-    postgres:10.3 -c 'config_file=/etc/postgresql/postgresql.conf'
+    postgres:10.5 -c 'config_file=/etc/postgresql/postgresql.conf'
 ```
 
 #### Backup / Restore
