@@ -4,6 +4,7 @@
 | expo | https://blog.expo.io/ |
 | @feathersjs/client | https://github.com/feathersjs/client/blob/master/CHANGELOG.md |
 | @feathersjs/authentication | https://github.com/feathersjs/authentication/blob/master/CHANGELOG.md |
+| graphql | https://github.com/graphql/graphql-js/releases |
 | mongoose | https://github.com/Automattic/mongoose/blob/master/History.md |
 | react | https://github.com/facebook/react/blob/master/CHANGELOG.md |
 | react-native-elements | https://github.com/react-native-training/react-native-elements/releases |
