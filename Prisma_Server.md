@@ -5,7 +5,7 @@ version: '3'
 
 services:
   prisma:
-    image: prismagraphql/prisma:1.18
+    image: prismagraphql/prisma:1.20
     restart: unless-stopped
     ports:
       - "4466:4466"
@@ -21,7 +21,7 @@ services:
             password: prisma
             migrations: true
   postgres:
-    image: postgres:10.5
+    image: postgres:10.6
     restart: unless-stopped
     environment:
       POSTGRES_USER: prisma
