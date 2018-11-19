@@ -1,7 +1,7 @@
 | Project                   | Link                                                                     |
 |---------------------------|--------------------------------------------------------------------------|
 | create-react-app | https://github.com/facebook/create-react-app/releases |
-| expo | https://blog.expo.io/ |
+| expo | https://docs.expo.io/versions/latest/workflow/upgrading-expo-sdk-walkthrough |
 | @feathersjs/client | https://github.com/feathersjs/client/blob/master/CHANGELOG.md |
 | @feathersjs/authentication | https://github.com/feathersjs/authentication/blob/master/CHANGELOG.md |
 | graphql | https://github.com/graphql/graphql-js/releases |
