@@ -7,6 +7,7 @@
 | graphql | https://github.com/graphql/graphql-js/releases |
 | mongoose | https://github.com/Automattic/mongoose/blob/master/History.md |
 | nextjs | https://github.com/zeit/next.js/releases/ |
+| prisma | https://github.com/prisma/prisma/releases |
 | react | https://github.com/facebook/react/blob/master/CHANGELOG.md |
 | react-native-elements | https://github.com/react-native-training/react-native-elements/releases |
 | react-navigation | https://github.com/react-navigation/react-navigation/blob/master/CHANGELOG.md
