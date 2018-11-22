@@ -1,5 +1,6 @@
 | Project                   | Link                                                                     |
 |---------------------------|--------------------------------------------------------------------------|
+| config | https://github.com/lorenwest/node-config/blob/master/History.md |
 | create-react-app | https://github.com/facebook/create-react-app/releases |
 | expo | https://docs.expo.io/versions/latest/workflow/upgrading-expo-sdk-walkthrough |
 | @feathersjs/client | https://github.com/feathersjs/client/blob/master/CHANGELOG.md |
