@@ -133,6 +133,8 @@ sudo ufw allow 10080/tcp
 
 ## Docker
 
+### As shell script:
+
 ```bash
 docker run --detach \
     --hostname gitlab.mydomain.com \
@@ -144,6 +146,26 @@ docker run --detach \
     --volume /docker-volumes/gitlab-logs:/var/log/gitlab \
     --volume /docker-volumes/gitlab-data:/var/opt/gitlab \
     gitlab/gitlab-ce:latest
+```
+
+### Or docker-compose.yml
+
+```yml
+version: '3'
+
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:10080:80"
+      - "127.0.0.1:10081:8065"
+      - "22:22"
+    hostname: gitlab.mydomain.com
+    volumes:
+      - /docker-volumes/gitlab-config:/etc/gitlab
+      - /docker-volumes/gitlab-logs:/var/log/gitlab
+      - /docker-volumes/gitlab-data:/var/opt/gitlab
 ```
 
 ### Adjustments in /etc/gitlab/gitlab.rb:
