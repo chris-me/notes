@@ -32,7 +32,6 @@
 - [Microsoft_FTP_(IIS)](Microsoft_FTP_IIS.md)
 - [MongoDB](MongoDB.md)
 - [Portainer](Portainer.md)
-- [PostgreSQL](PostgreSQL.md)
 - [Prisma Server](Prisma_Server.md)
 - [Ruby_on_Rails](Ruby_on_Rails.md)
 - [React](React.md)
