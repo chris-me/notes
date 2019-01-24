@@ -1,5 +1,16 @@
+- [Misc](#misc)
 - [Undoing Changes](#undoing-changes)
 
+# Misc
+
+## fast-forward + push branch without checkout
+
+```bash
+# example: fast forward master to development
+$ git fetch . development:master
+# push branch
+$ git push origin master
+```
 
 
 # Undoing Changes
