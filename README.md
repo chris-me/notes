@@ -37,6 +37,5 @@
 - [React](React.md)
 - [Redis](Redis.md)
 - [SQL_Cheatsheet](SQL_Cheatsheet.md)
-- [Ubuntu Server Setup](Ubuntu_Server_Setup.md)
 - [Unity3D](Unity3D.md)
 - [Virtualization](Virtualization.md)
