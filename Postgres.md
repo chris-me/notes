@@ -1,8 +1,8 @@
 
 # Postgres
 
-- [Links](#links)
 - [Backup / Restore (docker)](#backup-restore-docker)
+- [Links](#links)
 - [pqsql](#pqsql)
 - [SQL Snippets](#sql-snippets)
 
