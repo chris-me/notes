@@ -43,6 +43,8 @@ docker exec -u postgres -i CONTAINER_NAME pg_restore -c -d restore < db.dump
 ## Links
 
 - http://www.jancarloviray.com/blog/postgres-quick-start-and-best-practices/
+- https://kukuruku.co/post/postgresql-set-of-practices/
+- https://www.pgbarman.org/index.html
 
 ## pqsql
 
