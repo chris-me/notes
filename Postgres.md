@@ -81,3 +81,15 @@ GRANT ALL PRIVILEGES ON DATABASE "database_name" to my_username;
 ```sql
 SELECT * FROM pg_stat_activity;
 ```
+
+## List table sizes
+
+```sql
+SELECT
+   relname AS table_name,
+   pg_size_pretty(pg_total_relation_size(relid)) AS total,
+   pg_size_pretty(pg_relation_size(relid)) AS internal,
+   pg_size_pretty(pg_table_size(relid) - pg_relation_size(relid)) AS external,
+   pg_size_pretty(pg_indexes_size(relid)) AS indexes
+FROM pg_catalog.pg_statio_user_tables ORDER BY pg_total_relation_size(relid) DESC
+```
