@@ -13,7 +13,6 @@
 - [Docker](Docker.md)
 - [ELK](ELK.md)
 - [Eclipse IDE](Eclipse_IDE.md)
-- [express_request_logger](express_request_logger.md)
 - [FeathersJS](FeathersJS.md)
 - [git](git.md)
 - [GitLab](GitLab.md)
