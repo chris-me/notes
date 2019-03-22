@@ -51,7 +51,10 @@ docker exec -u postgres -i CONTAINER_NAME pg_restore -c -d restore < db.dump
 ### Start psql in docker
 
 ```bash
+# connect into running container:
 docker-compose exec -u postgres postgres psql
+# connect to remote database:
+docker run -it -e PGPASSWORD=mypassword postgres:alpine psql -h myserverhostname -U postgres
 ```
 
 ### List databases
