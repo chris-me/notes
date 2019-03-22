@@ -33,7 +33,6 @@
 - [MongoDB](MongoDB.md)
 - [Postgres](Postgres.md)
 - [Prisma Server](Prisma_Server.md)
-- [Ruby_on_Rails](Ruby_on_Rails.md)
 - [React](React.md)
 - [Redis](Redis.md)
 - [SQL_Cheatsheet](SQL_Cheatsheet.md)
