@@ -69,6 +69,12 @@ docker run -it -e PGPASSWORD=mypassword postgres:alpine psql -h myserverhostname
 \c mydatabase
 ```
 
+### Execute query every X seconds
+
+```sql
+SELECT pid, datname, query FROM pg_stat_activity; \watch 2
+```
+
 ## SQL Snippets
 
 ## Create and grant user
