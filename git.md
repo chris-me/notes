@@ -1,5 +1,6 @@
 - [Misc](#misc)
 - [Undoing Changes](#undoing-changes)
+- [Links](#links)
 
 # Misc
 
@@ -12,6 +13,9 @@ $ git fetch . development:master
 $ git push origin master
 ```
 
+## Removing sensitive data from a repository
+
+See https://help.github.com/en/articles/removing-sensitive-data-from-a-repository
 
 # Undoing Changes
 
@@ -43,4 +47,7 @@ Force overwrite the remote branch:
 git push -f
 ```
 
+# Links
+
+* https://dev.to/datreeio/10-insanely-useful-git-commands-you-wish-existed-and-their-alternatives-8e6
 
