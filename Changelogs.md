@@ -7,6 +7,7 @@
 | @feathersjs/authentication | https://github.com/feathersjs/authentication/blob/master/CHANGELOG.md |
 | graphql | https://github.com/graphql/graphql-js/releases |
 | mongoose | https://github.com/Automattic/mongoose/blob/master/History.md |
+| nodemailer | https://github.com/nodemailer/nodemailer/blob/master/CHANGELOG.md |
 | nextjs | https://github.com/zeit/next.js/releases/ |
 | prisma | https://github.com/prisma/prisma/releases |
 | react | https://github.com/facebook/react/blob/master/CHANGELOG.md |
