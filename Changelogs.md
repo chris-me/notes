@@ -13,3 +13,4 @@
 | react | https://github.com/facebook/react/blob/master/CHANGELOG.md |
 | react-native-elements | https://github.com/react-native-training/react-native-elements/releases |
 | react-navigation | https://github.com/react-navigation/react-navigation/blob/master/CHANGELOG.md
+| sharp | https://sharp.pixelplumbing.com/en/stable/changelog/ |
