@@ -12,5 +12,6 @@
 | prisma | https://github.com/prisma/prisma/releases |
 | react | https://github.com/facebook/react/blob/master/CHANGELOG.md |
 | react-native-elements | https://github.com/react-native-training/react-native-elements/releases |
-| react-navigation | https://github.com/react-navigation/react-navigation/blob/master/CHANGELOG.md
+| react-navigation | https://github.com/react-navigation/react-navigation/blob/master/CHANGELOG.md |
+| react-router-dom | https://github.com/ReactTraining/react-router/releases |
 | sharp | https://sharp.pixelplumbing.com/en/stable/changelog/ |
