@@ -5,12 +5,12 @@
 ### Create a user and assign collection
 
 ```javascript
-use myapp
+use mydatabase
 db.createUser(
   {
     user: "myappuser",
     pwd: "myappuserpassword",
-    roles: [ { role: "readWrite", db: "myapp" }]
+    roles: [ { role: "readWrite", db: "mydatabase" }]
   }
 )
 ```
@@ -20,5 +20,5 @@ db.createUser(
 Also works for mongoose
 
 ```javascript
-"mongodb://myappuser:myappuserpassword@localhost:27017/myapp?ssl=true"
+"mongodb://myappuser:myappuserpassword@localhost:27017/mydatabase?ssl=true"
 ```
