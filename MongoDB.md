@@ -1,5 +1,13 @@
 # MongoDB
 
+## MongoDB shell
+
+###  Connect to ssl w/ self-signed cert
+
+```bash
+mongo -ssl --sslAllowInvalidCertificates "mongodb://user:password@localhost/kursportal_dev?ssl=true"
+```
+
 ## Authentication / Authorization
 
 ### Create a user and assign collection
