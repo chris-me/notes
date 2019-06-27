@@ -9,6 +9,7 @@
 | mongoose | https://github.com/Automattic/mongoose/blob/master/History.md |
 | nodemailer | https://github.com/nodemailer/nodemailer/blob/master/CHANGELOG.md |
 | nextjs | https://github.com/zeit/next.js/releases/ |
+| phaser | https://github.com/photonstorm/phaser/blob/master/CHANGELOG.md |
 | prisma | https://github.com/prisma/prisma/releases |
 | react | https://github.com/facebook/react/blob/master/CHANGELOG.md |
 | react-native-elements | https://github.com/react-native-training/react-native-elements/releases |
