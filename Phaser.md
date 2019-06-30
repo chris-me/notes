@@ -1,3 +1,28 @@
+## Fonts
+
+Include fonts in html head and add a div in body that's not displayed to load the font(s)
+
+```html
+<link
+  href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"
+  rel="stylesheet"
+/>
+
+<div
+  style="font-family:'Indie Flower'; position:absolute; left:-1000px; visibility:hidden;"
+>
+  .
+</div>
+```
+
+Font can now be used in game
+```javascript
+const test1 = this.add.text(400, 50, 'Phaser 3', {
+  fontSize: 32,
+  fontFamily: 'Indie Flower',
+});
+```
+
 ## Sprites
 
 ```javascript
