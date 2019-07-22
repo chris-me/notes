@@ -21,16 +21,18 @@ docker exec -u postgres -i CONTAINER_NAME pg_dump DBNAME > db.sql
 ```bash
 #!/bin/bash
 
-DBHOSTNAME=mypgserver
+DBHOSTNAME=postgres.myserver.com
 DBUSER=postgres
-DBPASSWORD=postgres
+DBPASSWORD=foobar
 TMP_BACKUP_DIR=/tmp/pgbackup
 BORG_REPO="/mnt/backups/borgbackups/postgres"
-DBNAME=mydatabase
+DATABASES="db1 db2 db3"
 ###############################################################################
 DATUM=`date +"%Y-%m-%d-%H-%M-%S"`
 mkdir $TMP_BACKUP_DIR
-/usr/bin/docker run -e PGPASSWORD=$DBPASSWORD postgres:alpine pg_dump -h $DBHOSTNAME -U $DBUSER $DBNAME > $TMP_BACKUP_DIR/$DBNAME.sql
+for DBNAME in $DATABASES; do
+  /usr/bin/docker run -e PGPASSWORD=$DBPASSWORD postgres:alpine pg_dump -h $DBHOSTNAME -U $DBUSER $DBNAME > $TMP_BACKUP_DIR/$DBNAME.sql
+done
 borg create --stats --progress --compression lz4 ${BORG_REPO}::${DATUM} $TMP_BACKUP_DIR
 rm -rf $TMP_BACKUP_DIR
 borg prune -v --list $BORG_REPO --keep-hourly=24 --keep-daily=7 --keep-weekly=4 --keep-monthly=6
