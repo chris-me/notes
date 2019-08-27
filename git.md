@@ -13,6 +13,13 @@ $ git fetch . development:master
 $ git push origin master
 ```
 
+## fast-forward local branch to remote without checkout
+
+```bash
+# example: fast forward local testing to match remote
+git fetch origin testing:testing
+```
+
 ## Removing sensitive data from a repository
 
 See https://help.github.com/en/articles/removing-sensitive-data-from-a-repository
