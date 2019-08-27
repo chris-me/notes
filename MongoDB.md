@@ -8,6 +8,12 @@
 mongo -ssl --sslAllowInvalidCertificates "mongodb://user:password@localhost/kursportal_dev?ssl=true"
 ```
 
+## Connect with docker
+
+```bash
+docker run -it --rm mongo:4 mongo --sslAllowInvalidCertificates --ssl --host mongodb.myserver.com --authenticationDatabase admin --username user1 --password foobar
+```
+
 ## Authentication / Authorization
 
 ### Create a user and assign collection
