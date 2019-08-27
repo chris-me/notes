@@ -20,10 +20,6 @@ $ git push origin master
 git fetch origin testing:testing
 ```
 
-## Removing sensitive data from a repository
-
-See https://help.github.com/en/articles/removing-sensitive-data-from-a-repository
-
 # Undoing Changes
 
 ## git revert
