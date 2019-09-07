@@ -1,5 +1,6 @@
 | Project                   | Link                                                                     |
 |---------------------------|--------------------------------------------------------------------------|
+| aws-sdk | https://github.com/aws/aws-sdk-js/blob/master/CHANGELOG.md |
 | babel | https://github.com/babel/babel/blob/master/CHANGELOG.md |
 | config | https://github.com/lorenwest/node-config/blob/master/History.md |
 | create-react-app | https://github.com/facebook/create-react-app/releases |
