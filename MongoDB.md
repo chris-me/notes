@@ -36,3 +36,35 @@ Also works for mongoose
 ```javascript
 "mongodb://myappuser:myappuserpassword@localhost:27017/mydatabase?ssl=true"
 ```
+
+## Replica Sets
+
+### Create and start a replicat set
+
+```javascript
+const config = {
+  _id: 'rs0',
+  members: [
+    {
+      _id: 0,
+      host: 'mongo-node1:27017',
+    },
+    {
+      _id: 1,
+      host: 'mongo-node2:27017',
+    },
+    {
+      _id: 2,
+      host: 'mongo-node3:27017',
+    },
+  ],
+};
+
+rs.initiate(config);
+```
+
+### Useful commands
+
+```javascript
+rs.status();
+```
