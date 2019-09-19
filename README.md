@@ -38,3 +38,4 @@
 - [SQL_Cheatsheet](SQL_Cheatsheet.md)
 - [Unity3D](Unity3D.md)
 - [Virtualization](Virtualization.md)
+- [Windows Terminal](Windows_Terminal.md)
