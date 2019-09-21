@@ -1,6 +1,16 @@
 ## kubectl
 
+### getting information
+
 ```bash
 # get detailed information about pods
 kubectl get pods -o wide
+# list all pods, services and deployments
+kubectl get all --all-namespaces
+# list all serivce accounts
+kubectl get sa --all-namespaces
+# list all secrets
+kubectl get secret --all-namespaces
+# list pvc's
+kubectl get pvc --all-namespaces
 ```
