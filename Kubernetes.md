@@ -19,4 +19,6 @@ kubectl get clusterrolebinding
 kubectl get clusterissuer
 # list certificates
 kubectl get certificate
+# list ingress'es
+kubectl get ingress
 ```
