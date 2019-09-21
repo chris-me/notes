@@ -13,4 +13,6 @@ kubectl get sa --all-namespaces
 kubectl get secret --all-namespaces
 # list pvc's
 kubectl get pvc --all-namespaces
+# get clusterrolebinding's
+kubectl get clusterrolebinding
 ```
