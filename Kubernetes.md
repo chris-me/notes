@@ -17,4 +17,6 @@ kubectl get pvc --all-namespaces
 kubectl get clusterrolebinding
 # list clusterissuer's
 kubectl get clusterissuer
+# list certificates
+kubectl get certificate
 ```
