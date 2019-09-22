@@ -21,4 +21,14 @@ kubectl get clusterissuer
 kubectl get certificate
 # list ingress'es
 kubectl get ingress
+# list replication controllers
+kubectl get rc
 ```
+
+### port forwarding
+
+```bash
+# forward local port 3000 to port 80 of the service
+kubectl port-forward svc/hello-kubernetes-my 3000:80
+```
+
