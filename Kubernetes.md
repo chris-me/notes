@@ -32,3 +32,13 @@ kubectl get rc
 kubectl port-forward svc/hello-kubernetes-my 3000:80
 ```
 
+## updating
+
+```bash
+# Update local Helm chart repository cache
+helm repo update
+```
+
+### cert-manager
+
+https://docs.cert-manager.io/en/latest/tasks/upgrading/index.html
