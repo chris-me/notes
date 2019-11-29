@@ -66,5 +66,7 @@ rs.initiate(config);
 ### Useful commands
 
 ```javascript
-rs.status();
+rs.status()
+rs.printReplicationInfo()
+rs.printSlaveReplicationInfo()
 ```
