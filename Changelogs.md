@@ -1,6 +1,7 @@
 | Project                   | Link                                                                     |
 |---------------------------|--------------------------------------------------------------------------|
 | apollographql/apollo-client | https://github.com/apollographql/apollo-client/blob/master/CHANGELOG.md |
+| apollographql/apollo-server | https://github.com/apollographql/apollo-server/blob/master/CHANGELOG.md |
 | apollographql/react-hooks | https://github.com/apollographql/react-apollo/blob/master/Changelog.md |
 | aws-sdk | https://github.com/aws/aws-sdk-js/blob/master/CHANGELOG.md |
 | babel | https://github.com/babel/babel/blob/master/CHANGELOG.md |
