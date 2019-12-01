@@ -70,3 +70,26 @@ rs.status()
 rs.printReplicationInfo()
 rs.printSlaveReplicationInfo()
 ```
+## Views
+
+### Create view
+
+```javascript
+db.createView('viewnamehere', 'collectionname', [
+  {
+    $match: {
+      emailConfirmed: false,
+    },
+  },
+  {
+    $project: {
+      _id: 0,
+    },
+  },
+  {
+    $sort: {
+      createdAt: -1,
+    },
+  },
+]);
+```
