@@ -1,3 +1,16 @@
+## general
+
+### importing
+
+Import some file ('dburl.py') from one folder upwards, then one folder deep.
+
+```python
+import sys 
+sys.path.append('../foo')
+import dburl
+url = dburl.get_db_url()
+```
+
 ## pandas
 
 ### change display options
