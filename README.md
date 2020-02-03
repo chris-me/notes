@@ -34,6 +34,7 @@
 - [Postgres](Postgres.md)
 - [Phaser](Phaser.md)
 - [Prisma Server](Prisma_Server.md)
+- [Python Data Science](Python_Data_Science.md)
 - [React](React.md)
 - [Redis](Redis.md)
 - [SQL_Cheatsheet](SQL_Cheatsheet.md)
