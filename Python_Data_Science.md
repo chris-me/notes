@@ -1,5 +1,27 @@
 ## general
 
+### docker
+
+Base Dockerfile
+
+```Dockerfile
+FROM python:3.8-slim
+RUN pip install --no-cache-dir matplotlib pandas
+```
+
+Build
+
+```bash
+docker build -t datapy .
+```
+
+Run
+
+```bash
+docker run --rm -it datapy
+```
+
+
 ### importing
 
 Import some file ('dburl.py') from one folder upwards, then one folder deep.
