@@ -38,6 +38,7 @@
 - [React](React.md)
 - [Redis](Redis.md)
 - [SQL_Cheatsheet](SQL_Cheatsheet.md)
+- [TypeScript](TypeScript.md)
 - [Unity3D](Unity3D.md)
 - [Virtualization](Virtualization.md)
 - [Windows 10](Windows_10.md)
