@@ -103,6 +103,12 @@ docker run -it -e PGPASSWORD=mypassword postgres:alpine psql -h myserverhostname
 SET search_path TO myschema;
 ```
 
+### List tables of current Schema
+
+```bash
+\dt
+```
+
 ### Execute query every X seconds
 
 ```sql
