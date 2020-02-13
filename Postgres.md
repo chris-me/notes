@@ -85,10 +85,22 @@ docker run -it -e PGPASSWORD=mypassword postgres:alpine psql -h myserverhostname
 \l
 ```
 
-### Connect to database
+### Connect to/change database
 
 ```bash
 \c mydatabase
+```
+
+### List Schemas
+
+```bash
+\dn
+```
+
+### Set Schema
+
+```bash
+SET search_path TO myschema;
 ```
 
 ### Execute query every X seconds
