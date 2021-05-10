@@ -30,7 +30,6 @@
 - [Material UI](Material_UI.md)
 - [Microsoft_FTP_(IIS)](Microsoft_FTP_IIS.md)
 - [MongoDB](MongoDB.md)
-- [Postgres](Postgres.md)
 - [Phaser](Phaser.md)
 - [Prisma Server](Prisma_Server.md)
 - [Python Data Science](Python_Data_Science.md)
